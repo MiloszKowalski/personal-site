@@ -1,0 +1,25 @@
+<svg viewBox="0 0 100 70">
+  <defs>
+    <style>
+      .plflag-cls-1 {
+        fill: #fff;
+      }
+
+      .plflag-cls-2 {
+        fill: #df0914;
+      }
+
+      .plflag-cls-3 {
+        fill: none;
+        stroke: #df0914;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="plflag-cls-1" x="2" y="2" width="92.55" height="61.62" rx="10.24"/>
+    <path class="plflag-cls-2" d="M2.28,32.62h91a0,0,0,0,1,0,0V53.91a9.71,9.71,0,0,1-9.71,9.71H13.28a11,11,0,0,1-11-11v-20a0,0,0,0,1,0,0Z"/>
+    <rect class="plflag-cls-3" x="2" y="2" width="92.55" height="61.62" rx="10.24"/>
+  </g>
+</svg>
