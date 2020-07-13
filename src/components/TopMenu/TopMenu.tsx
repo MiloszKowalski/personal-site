@@ -1,14 +1,14 @@
 import React, { useContext, useLayoutEffect, useState } from 'react';
 import { useScrollPosition } from 'utils/useScrollPosition';
 import { TopMenuContext } from 'contexts/TopMenuContext';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 import Navigation from './Navigation';
 import './TopMenu.scss';
 
-const TopMenu: React.FC = () => {
+const TopMenu: React.FC<RouteComponentProps> = ({location}: RouteComponentProps) => {
   const { isExpanded, isDocked, setIsDocked,
     scrolledDown, setScrolledDown } = useContext(TopMenuContext);
   const [isLoaded, setIsLoaded] = useState(false);
-
   useScrollPosition(({ prevPos, currPos }) => {
     // If the position hasn't changed, return
     if(prevPos === currPos) return;
@@ -18,7 +18,7 @@ const TopMenu: React.FC = () => {
     else setScrolledDown(false);
 
     // TopMenu docking should appear only on the main page
-    if(window.location.pathname !== '/') return;
+    if(location.pathname !== '/') return;
 
     // If we are on the top of the page and menu isn't expanded, dock menu
     if(currPos.y === 0 && !isExpanded) setIsDocked(true);
@@ -27,7 +27,7 @@ const TopMenu: React.FC = () => {
 
   function handleOnLoad() {
     // Menu docking should appear only on the main page
-    if(window.location.pathname !== '/') return;
+    if(location.pathname !== '/') return;
 
     // Dock the menu based on these conditions
     if(window.scrollY === 0 && !isExpanded) {
@@ -51,7 +51,7 @@ const TopMenu: React.FC = () => {
       `TopMenu
       ${isLoaded ? 'loaded' : ''}
       ${isExpanded ? 'expanded' : ''}
-      ${isDocked ? 'docked' : 'normal'}
+      ${isDocked && location.pathname === '/' ? 'docked' : 'normal'}
       ${scrolledDown && !isExpanded ? 'hidden' : ''}`
     }>
       <div className="topmenu-logo">
@@ -62,4 +62,4 @@ const TopMenu: React.FC = () => {
   )
 }
 
-export default TopMenu;
+export default withRouter(TopMenu);

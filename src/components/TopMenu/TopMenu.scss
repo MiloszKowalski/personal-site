@@ -52,7 +52,7 @@ nav.TopMenu {
     flex-direction: row;
     transition: transform 0.5s ease-in-out;
 
-    @media (max-width: var(--bp-laptop)) {
+    @media (max-width: 1024px) {
       position: fixed;
       margin: 0;
       padding: 0;
@@ -71,28 +71,48 @@ nav.TopMenu {
     margin: 0 10px;
     font-weight: bold;
     transition: background-position 0.25s, color 0.25s, font-size 0.25s;
-    color: var(--main-light);
-    -webkit-text-fill-color: var(--main-light);
-    cursor: pointer;
     display: flex;
     align-items: center;
     position: relative;
 
-    &:hover::after {
-      opacity: 1;
-      transform: translateX(0) scaleX(1);
+    svg {
+      cursor: pointer;
     }
 
-    &::after {
+    a {
+      text-decoration: none;
+      position: relative;
+
+      &.active {
+        cursor: default;
+      }
+
+      &:not(.active)::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        bottom: -10px;
+        position: absolute;
+        opacity: 0;
+        transform: translateX(50%) scaleX(0.5);
+        transition: opacity 0.25s, transform 0.25s;
+      }
+
+      &:hover::after {
+        opacity: 1;
+        transform: translateX(0) scaleX(1);
+      }
+    }
+
+    a.active::after {
       content: '';
       display: block;
       width: 100%;
       height: 3px;
       bottom: -10px;
       position: absolute;
-      background-color: var(--gradient-end);
-      opacity: 0;
-      transform: translateX(50%) scaleX(0.5);
+      opacity: 1;
       transition: opacity 0.25s, transform 0.25s;
     }
 
@@ -100,7 +120,7 @@ nav.TopMenu {
       display: none;
     }
 
-    @media (max-width: var(--bp-laptop)) {
+    @media (max-width: 1024px) {
       background: var(--main-light);
       -webkit-background-clip: text;
       background-clip: text;
@@ -149,7 +169,7 @@ nav.TopMenu {
       }
     }
 
-    @media (max-width: var(--bp-laptop)) {
+    @media (max-width: 1024px) {
       display: block;
     }
   }
@@ -160,8 +180,9 @@ nav.TopMenu {
   }
 
   &.normal {
-    .topmenu-logo h1, li {
-      background: -webkit-linear-gradient(var(--gradient-start), var(--gradient-end));
+    .topmenu-logo h1, li a {
+      background: -webkit-linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+      background-attachment: fixed;
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -171,9 +192,14 @@ nav.TopMenu {
       background-size: 300% 300%;
       background-position: top;
 
-      @media (max-width: var(--bp-laptop)) {
+      @media (max-width: 1024px) {
         color: var(--main-light);
         -webkit-text-fill-color: var(--main-light);
+      }
+
+      a::after, a.active::after {
+        background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+        background-attachment: fixed;
       }
 
       &:hover {
@@ -198,11 +224,19 @@ nav.TopMenu {
       -webkit-text-fill-color: var(--main-light);
     }
 
-    li::after {
+    .topmenu-logo h1, li a {
+      background: var(--main-light);
+      background-attachment: fixed;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    li a::after, li a.active::after {
       background-color: var(--main-light);
     }
 
-    @media (min-width: var(--bp-laptop)) {
+    @media (min-width: 1024px) {
       li {
         font-size: 1.1em;
         color: transparent;
@@ -215,9 +249,9 @@ nav.TopMenu {
     }
   }
 
-  &.expanded {
+  &.expanded, &.expanded.normal {
     ul {
-      @media (max-width: var(--bp-laptop)) {
+      @media (max-width: 1024px) {
         transform: translateX(-100%);
       }
     }
@@ -226,9 +260,13 @@ nav.TopMenu {
       opacity: 1;
     }
 
-    li {
+    li a {
       color: var(--main-light);
       -webkit-text-fill-color: var(--main-light);
+    }
+
+    a::after, a.active::after {
+      background: #fff;
     }
   }
 }
@@ -236,7 +274,7 @@ nav.TopMenu {
 .nav-shadow {
   opacity: 0;
   transition: opacity 0.25s;
-  @media (max-width: var(--bp-laptop)) {
+  @media (max-width: 1024px) {
     width: 100vw;
     max-width:100%;
     height: 100vh;
@@ -258,7 +296,7 @@ svg {
 
   transition: transform 0.25s;
 
-  @media (max-width: var(--bp-laptop)) {
+  @media (max-width: 1024px) {
     width: 60px;
   }
 }
