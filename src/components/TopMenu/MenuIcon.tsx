@@ -5,6 +5,8 @@ const MenuIcon: React.FC = () => {
   const { isExpanded, setIsExpanded, setIsDocked } = useContext(TopMenuContext);
 
   function handleClick(): void {
+    setIsExpanded(!isExpanded);
+
     // Docking should appear only on the main page
     if(window.location.pathname !== '/') return;
 
@@ -14,7 +16,6 @@ const MenuIcon: React.FC = () => {
     } else {
       setTimeout(() => setIsDocked(false), 0);
     }
-    setIsExpanded(!isExpanded);
   }
 
   return (
