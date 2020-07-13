@@ -1,10 +1,14 @@
 import React from 'react';
+import TopMenu from 'components/TopMenu/TopMenu';
+import TopMenuContextProvider from 'contexts/TopMenuContext';
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <TopMenuContextProvider>
+      <div className="App">
+        <TopMenu />
+      </div>
+    </TopMenuContextProvider>
   );
 }
 
