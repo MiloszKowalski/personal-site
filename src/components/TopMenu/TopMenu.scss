@@ -285,18 +285,20 @@ nav.TopMenu {
     z-index: -2;
   }
 }
+.flag {
+  svg {
+    width: 30px;
+    margin: 0 5px;
 
-svg {
-  width: 30px;
-  margin: 0 5px;
+    &:hover {
+      transform: scale(1.2);
+    }
 
-  &:hover {
-    transform: scale(1.2);
-  }
+    transition: transform 0.25s;
 
-  transition: transform 0.25s;
-
-  @media (max-width: 1024px) {
-    width: 60px;
+    @media (max-width: 1024px) {
+      width: 60px;
+    }
   }
 }
+
