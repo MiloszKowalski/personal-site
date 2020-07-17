@@ -5,6 +5,7 @@
   background: var(--standard-gradient);
   height: 100vh;
   position: relative;
+  padding: 50px;
 }
 
 .hero img {
@@ -18,4 +19,20 @@
   @media (max-width: 480px) {
     height: 80%;
   }
+}
+
+.hero h1, h2 {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  top: 10vh;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero h2 {
+  font-size: 1.6rem;
+  font-weight: normal;
 }
