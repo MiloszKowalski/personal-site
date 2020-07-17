@@ -17,6 +17,11 @@ const Navigation: React.FC = () => {
       i18n.changeLanguage(Language.English);
     else
       i18n.changeLanguage(Language.Polish);
+
+    // Refresh at home page to fix typewriter
+    // multiple-ghost text on language change
+    if(document.location.pathname === '/')
+      document.location.reload();
   }
 
   function handleClick(): void {
