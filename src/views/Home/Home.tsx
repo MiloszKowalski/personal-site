@@ -12,13 +12,13 @@ const Home: React.FC = () => {
   return (
     <div className="view-wrapper">
       <section className="hero">
-        <h1>{ t('i am milosz')}</h1>
-        <h2>{ t('i create') + ' '}
+        <h1>{ t('homepage.hero.i am milosz')}</h1>
+        <h2>{ t('homepage.hero.i create') + ' '}
         <Typical
-          steps={[t('clean code'), defaultTimeoutMS,
-                  t('gorgeous designs'), defaultTimeoutMS,
-                  t('working atmosphere'), defaultTimeoutMS,
-                  t('projects start finish'), defaultTimeoutMS]}
+          steps={[t('homepage.hero.clean code'), defaultTimeoutMS,
+                  t('homepage.hero.gorgeous designs'), defaultTimeoutMS,
+                  t('homepage.hero.working atmosphere'), defaultTimeoutMS,
+                  t('homepage.hero.projects start finish'), defaultTimeoutMS]}
           loop={Infinity}
           wrapper="span"
         />
