@@ -250,23 +250,23 @@ nav.TopMenu {
   }
 
   &.expanded, &.expanded.normal {
-    ul {
-      @media (max-width: 1024px) {
+    @media (max-width: 1024px) {
+      ul {
         transform: translateX(-100%);
       }
-    }
 
-    .nav-shadow {
-      opacity: 1;
-    }
+      .nav-shadow {
+        opacity: 1;
+      }
 
-    li a {
-      color: var(--main-light);
-      -webkit-text-fill-color: var(--main-light);
-    }
+      li a {
+        color: var(--main-light);
+        -webkit-text-fill-color: var(--main-light);
+      }
 
-    a::after, a.active::after {
-      background: #fff;
+      a::after, a.active::after {
+        background: #fff;
+      }
     }
   }
 }
