@@ -1,38 +1,103 @@
 @import 'styles/color-palette';
 @import 'styles/breakpoints';
 
+* {
+  box-sizing: border-box;
+}
+
 .hero {
   background: var(--standard-gradient);
   height: 100vh;
   position: relative;
-  padding: 50px;
+  padding: 30px;
+
+  @media (min-width: 1024px) {
+    padding: 50px;
+  }
 }
 
 .hero img {
   position: absolute;
-  bottom: 0;
+  bottom: -3px;
   right: 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
   pointer-events: none;
 
-  @media (max-width: 480px) {
-    height: 80%;
+  @media (min-width: 480px) {
+    height: 100%;
+  }
+}
+
+.action-wrapper {
+  position: relative;
+  top: 10vh;
+  text-align: center;
+
+  @media (min-width: 1024px), (orientation: landscape) {
+    text-align: left;
   }
 }
 
 .hero h1, h2 {
   color: #fff;
   margin: 0;
-  position: relative;
-  top: 10vh;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.4rem;
+  @media (min-width: 480px) {
+    font-size: 3rem;
+  }
 }
 
 .hero h2 {
-  font-size: 1.6rem;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  @media (min-width: 1024px), (orientation: landscape) {
+    height: auto;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.6rem;
+  }
   font-weight: normal;
+  height: 4ch;
+}
+
+a {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 1000px;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--gradient-end);
+  background-color: #fff;
+  border: 1px solid transparent;
+  transition: transform 0.25s;
+  padding: 10px 25px;
+  margin: 10px 5px;
+  font-size: 0.8em;
+
+  @media (min-width: 1024px), (orientation: landscape) {
+    padding: 10px 30px;
+    margin: 20px 0;
+    margin-right: 15px;
+    font-size: 14px;
+  }
+
+  &.alt {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }

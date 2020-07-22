@@ -188,6 +188,13 @@ nav.TopMenu {
       -webkit-text-fill-color: transparent;
     }
 
+    li a {
+      @media (max-width: 1024px) {
+        color: var(--main-light);
+        -webkit-text-fill-color: var(--main-light);
+      }
+    }
+
     li {
       background-size: 300% 300%;
       background-position: top;
@@ -200,6 +207,10 @@ nav.TopMenu {
       a::after, a.active::after {
         background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
         background-attachment: fixed;
+
+        @media (max-width: 1024px) {
+          background: #fff;
+        }
       }
 
       &:hover {
