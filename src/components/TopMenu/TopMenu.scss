@@ -59,11 +59,11 @@ nav.TopMenu {
       top: 0;
       bottom: 0;
       right: -80vw;
-      padding-top: 128px;
       z-index: -1;
       background: var(--standard-gradient);
       min-width: 80vw;
       flex-direction: column;
+      justify-content: center;
     }
   }
 
@@ -257,6 +257,7 @@ nav.TopMenu {
 
       .nav-shadow {
         opacity: 1;
+        visibility: visible;
       }
 
       li a {
@@ -273,7 +274,8 @@ nav.TopMenu {
 
 .nav-shadow {
   opacity: 0;
-  transition: opacity 0.25s;
+  visibility: hidden;
+  transition: opacity 0.25s, visibility 0.25s;
   @media (max-width: 1024px) {
     width: 100vw;
     max-width:100%;
