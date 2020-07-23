@@ -15,6 +15,13 @@
       "gorgeous designs": "zjawiskowe projekty graficzne.",
       "working atmosphere": "przyjemną atmosferę pracy.",
       "projects start finish": "projekty od początku do końca."
+    },
+    "coding with passion": {
+      "heading": "Programuję z pasją",
+      "p1": "Moja przygoda z programowaniem zaczęła się kiedy skończyłem 15 lat.",
+      "p2": "Od tamtej pory poświęcam znaczną większość wolnego czasu na naukę i doskonalenie swoich umiejętności na tym polu.",
+      "p3": "Jakość pisanego przeze mnie kodu nie jest mi obojętna - zawsze szukam rozwiązań, które uczynią mój kod czytelnym i efektywnym.",
+      "button": "ZOBACZ MOJE CV"
     }
   }
 }

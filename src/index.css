@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: end;
+}
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;

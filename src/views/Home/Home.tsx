@@ -33,6 +33,20 @@ const Home: React.FC = () => {
           <img srcSet={`${heroDesktop} 2x`} alt="background" />
         </picture>
       </section>
+      <section className="coding-with-passion">
+        <div className="coding-text-wrapper">
+          <h3>{ t('homepage.coding with passion.heading') }</h3>
+          <p>{ t('homepage.coding with passion.p1') }</p>
+          <p>{ t('homepage.coding with passion.p2') }</p>
+          <p>{ t('homepage.coding with passion.p3') }</p>
+          <Link to="/resume"><div className="button purple">
+            { t('homepage.coding with passion.button') }
+          </div></Link>
+        </div>
+        <div className="coding-img-wrapper">
+          PLACEHOLDER
+        </div>
+      </section>
     </div>
   )
 }
