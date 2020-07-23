@@ -22,6 +22,12 @@
       "p2": "Since then, I've been spending most of my free time developing and perfecting my skills in that field.",
       "p3": "Quality of my code isn't indifferent to me - I always try to look for solutions, that will make my code readable and effective.",
       "button": "SEE MY RESUME"
+    },
+    "experience with design": {
+      "heading": "Experience in graphic design",
+      "p1": "Before I started programming, I was focused on graphic design.",
+      "p2": "The skills and experience I've aquired back then, help me with animations and user interfaces up to this day.",
+      "button": "SEE MY WORK"
     }
   }
 }
