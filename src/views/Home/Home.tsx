@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import Typical from 'react-typical';
 import heroMobile from './svg/Hero-mobile.svg';
 import heroDesktop from './svg/Hero-desktop.svg';
+import designOneMobile from './svg/Design1-mobile.svg';
+import designOneDesktop from './svg/Design1-desktop.svg';
 import './Home.scss';
 
 const Home: React.FC = () => {
@@ -44,6 +46,23 @@ const Home: React.FC = () => {
           </div></Link>
         </div>
         <div className="coding-img-wrapper">
+          PLACEHOLDER
+        </div>
+      </section>
+      <section className="design-experience">
+        <picture id="design-one-svg">
+          <source srcSet={`${designOneMobile} 1x`} media="(max-width: 768px)" />
+          <img srcSet={`${designOneDesktop} 2x`} alt="background" />
+        </picture>
+        <div className="design-text-wrapper">
+          <h3 className="alt">{ t('homepage.experience with design.heading') }</h3>
+          <p>{ t('homepage.experience with design.p1') }</p>
+          <p>{ t('homepage.experience with design.p2') }</p>
+          <Link to="/resume"><div className="button">
+            { t('homepage.experience with design.button') }
+          </div></Link>
+        </div>
+        <div className="design-img-wrapper">
           PLACEHOLDER
         </div>
       </section>
