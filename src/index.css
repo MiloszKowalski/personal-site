@@ -5,11 +5,11 @@
 }
 
 html {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
 section {
-  scroll-snap-align: end;
+  scroll-snap-align: center;
 }
 
 body {
