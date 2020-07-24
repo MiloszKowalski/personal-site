@@ -7,6 +7,9 @@ import heroDesktop from './svg/Hero-desktop.svg';
 import designOneMobile from './svg/Design1-mobile.svg';
 import designOneDesktop from './svg/Design1-desktop.svg';
 import designTwo from './svg/Design2.svg';
+import { ReactComponent as GithubIcon } from './svg/Github.svg';
+import { ReactComponent as LinkedInIcon } from './svg/LinkedIn.svg';
+import { ReactComponent as InstagramIcon } from './svg/Instagram.svg';
 import './Home.scss';
 
 const Home: React.FC = () => {
@@ -30,6 +33,11 @@ const Home: React.FC = () => {
           </h2>
           <Link to="/portfolio"><div className="button">{ t('homepage.hero.button1') }</div></Link>
           <Link to="/contact"><div className="button alt">{ t('homepage.hero.button2') }</div></Link>
+        </div>
+        <div className="socialmedia-container">
+          <a href="https://github.com/MiloszKowalski" target="_blank"><GithubIcon /></a>
+          <a href="https://www.linkedin.com/in/miłosz-kowalski-462404180/" target="_blank"><LinkedInIcon /></a>
+          <a href="https://www.instagram.com/mkowalski.dev/" target="_blank"><InstagramIcon /></a>
         </div>
         <picture>
           <source srcSet={`${heroMobile} 1x`} media="(max-width: 768px)" />
