@@ -28,6 +28,11 @@
       "p1": "Before I started programming, I was focused on graphic design.",
       "p2": "The skills and experience I've aquired back then, help me with animations and user interfaces up to this day.",
       "button": "SEE MY WORK"
+    },
+    "footer": {
+      "p1": "Made with ❤ by me.",
+      "p2": "Copyright Miłosz Kowalski ",
+      "p3": ". All rights reserved."
     }
   }
 }

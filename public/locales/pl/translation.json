@@ -28,6 +28,11 @@
       "p1": "Zanim zacząłem programować, zajmowałem się grafiką komputerową.",
       "p2": "Nabyte w tym czasie umiejętności dotyczące projektowania graficznych interfejsów i animacji wykorzystuję w swoich projektach do dziś.",
       "button": "ZOBACZ MOJE PRACE"
+    },
+    "footer": {
+      "p1": "Wykonane z ❤ przeze mnie.",
+      "p2": "Copyright Miłosz Kowalski ",
+      "p3": ". Wszelkie prawa zastrzeżone."
     }
   }
 }

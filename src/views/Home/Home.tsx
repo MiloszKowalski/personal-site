@@ -6,6 +6,7 @@ import heroMobile from './svg/Hero-mobile.svg';
 import heroDesktop from './svg/Hero-desktop.svg';
 import designOneMobile from './svg/Design1-mobile.svg';
 import designOneDesktop from './svg/Design1-desktop.svg';
+import designTwo from './svg/Design2.svg';
 import './Home.scss';
 
 const Home: React.FC = () => {
@@ -65,7 +66,18 @@ const Home: React.FC = () => {
         <div className="design-img-wrapper">
           PLACEHOLDER
         </div>
+        <img id="footer-img" src={ designTwo } alt="background" />
       </section>
+      <footer>
+        <div className="social-wrapper">
+
+        </div>
+        <div className="copyright">
+          <p>{ t('homepage.footer.p1') }</p>
+          <p>{ t('homepage.footer.p2') } &copy;{ new Date().getFullYear() }
+          { t('homepage.footer.p3') }</p>
+        </div>
+      </footer>
     </div>
   )
 }

@@ -184,7 +184,7 @@ p {
 
 section.design-experience {
   margin-top: 100px;
-  height: 100vh;
+  height: 105vh;
   background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
   position: relative;
   text-align: center;
@@ -193,8 +193,9 @@ section.design-experience {
   grid-template-areas:
   "picture"
   "text"
-  "image";
-  grid-template-rows: 1fr 5fr 5fr;
+  "image"
+  "footer";
+  grid-template-rows: 1fr 5fr 5fr 1fr;
 
   @media (min-width: 1024px) {
     flex-direction: row-reverse;
@@ -206,7 +207,7 @@ section.design-experience {
     grid-template-areas:
     "picture picture picture picture"
     "text    text    text    image  "
-    ".       .       .       .      ";
+    "footer  footer  footer  footer ";
   }
 
   .design-text-wrapper {
@@ -240,4 +241,18 @@ section.design-experience {
       transform: scaleY(0.7) translateY(-5px);
     }
   }
+}
+
+#footer-img {
+  grid-area: footer;
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+  margin-top: 120px;
+}
+
+.copyright p {
+  color: #999;
+  font-size: 0.8rem;
+  text-align: center;
 }
