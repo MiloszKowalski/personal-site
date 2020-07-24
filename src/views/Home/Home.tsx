@@ -35,9 +35,12 @@ const Home: React.FC = () => {
           <Link to="/contact"><div className="button alt">{ t('homepage.hero.button2') }</div></Link>
         </div>
         <div className="socialmedia-container">
-          <a href="https://github.com/MiloszKowalski" target="_blank"><GithubIcon /></a>
-          <a href="https://www.linkedin.com/in/miłosz-kowalski-462404180/" target="_blank"><LinkedInIcon /></a>
-          <a href="https://www.instagram.com/mkowalski.dev/" target="_blank"><InstagramIcon /></a>
+          <a href="https://github.com/MiloszKowalski"
+            rel="noopener noreferrer" target="_blank"><GithubIcon /></a>
+          <a href="https://www.linkedin.com/in/miłosz-kowalski-462404180/"
+            rel="noopener noreferrer" target="_blank"><LinkedInIcon /></a>
+          <a href="https://www.instagram.com/mkowalski.dev/"
+            rel="noopener noreferrer" target="_blank"><InstagramIcon /></a>
         </div>
         <picture>
           <source srcSet={`${heroMobile} 1x`} media="(max-width: 768px)" />
