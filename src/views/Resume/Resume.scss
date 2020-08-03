@@ -1,0 +1,68 @@
+@import 'styles/color-palette';
+@import 'styles/breakpoints';
+
+a {
+  color: #fff;
+}
+
+header {
+  color: #fff;
+  text-align: center;
+  padding-top: 20px;
+  position: absolute;
+  top: 80px;
+  width: 100%;
+
+  h1 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+}
+
+.grid-contact-wrapper {
+  padding: 15px;
+  padding-top: 185px;
+}
+
+.resume-top {
+  background: linear-gradient(220deg, var(--gradient-start), var(--gradient-end));
+}
+
+ul {
+  list-style: none;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.resume-photo-wrapper {
+  border-radius: 1000px;
+  background-color: #fff;
+  width: 50vw;
+  height: 50vw;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: -50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .resume-photo {
+    background: var(--standard-gradient);
+    border-radius: 1000px;
+    width: 90%;
+    height: 90%;
+    z-index: 1;
+  }
+}
+
+svg#resume-top {
+  position: relative;
+  bottom: -5px;
+}
