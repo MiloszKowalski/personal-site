@@ -7,9 +7,9 @@ import heroDesktop from './svg/Hero-desktop.svg';
 import designOneMobile from './svg/Design1-mobile.svg';
 import designOneDesktop from './svg/Design1-desktop.svg';
 import designTwo from './svg/Design2.svg';
-import { ReactComponent as GithubIcon } from './svg/Github.svg';
-import { ReactComponent as LinkedInIcon } from './svg/LinkedIn.svg';
-import { ReactComponent as InstagramIcon } from './svg/Instagram.svg';
+import { ReactComponent as GithubIcon } from 'components/svg/icons/Github.svg';
+import { ReactComponent as LinkedInIcon } from 'components/svg/icons/LinkedIn.svg';
+import { ReactComponent as InstagramIcon } from 'components/svg/icons/Instagram.svg';
 import './Home.scss';
 
 const Home: React.FC = () => {
@@ -58,7 +58,7 @@ const Home: React.FC = () => {
           </div></Link>
         </div>
         <div className="coding-img-wrapper">
-          PLACEHOLDER
+          <div className="coding-img"></div>
         </div>
       </section>
       <section className="design-experience">
