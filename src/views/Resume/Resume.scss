@@ -5,7 +5,7 @@ a {
   color: #fff;
 }
 
-header {
+header#name {
   color: #fff;
   text-align: center;
   padding-top: 20px;
@@ -65,4 +65,169 @@ ul {
 svg#resume-top {
   position: relative;
   bottom: -5px;
+}
+
+section.resume-section {
+  &#experience {
+    padding-top: 50px;
+  }
+
+  header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 15vw 1fr;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 80px 1fr;
+    }
+  }
+
+  .resume-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    background: linear-gradient(225deg, var(--gradient-start), var(--gradient-end));
+    box-shadow: 0 0 5px 1px rgba(185, 62, 241, 0.9);
+  }
+
+  .header-wrapper {
+    margin: 10px;
+    width: 15vw;
+    height: 15vw;
+
+    max-width: 80px;
+    max-height: 80px;
+
+    img {
+      width: 60%;
+    }
+
+    img#experience-icon {
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  .big-wrapper {
+    width: 20vw;
+    height: 20vw;
+    margin: 10px;
+
+    max-width: 100px;
+    max-height: 100px;
+
+    img {
+      width: 60%;
+    }
+
+    #followup {
+      position: relative;
+      width: 50%;
+      top: -2px;
+      right: -1px;
+    }
+  }
+
+  h1 {
+    position: relative;
+    margin-left: 20px;
+    top: -6px;
+    background: linear-gradient(180deg, var(--gradient-start), var(--gradient-end));
+    background-size: 300% 200%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    font-size: 1.75em;
+
+    @media (max-width: 320px) {
+      font-size: 1.5em;
+    }
+
+    @media (min-width: 480px) {
+      font-size: 2em;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 2.5em;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      background: linear-gradient(-45deg, var(--gradient-start), var(--gradient-end));
+      background-size: 300% 100%;
+      background-position-x: right;
+      width: 94%;
+      height: 3px;
+      border-radius: 50px;
+      position: absolute;
+      top: 1.9ch;
+      left: 2px;
+    }
+  }
+
+  .resume-section-content {
+    margin: 15px;
+
+    @media (min-width: 768px) {
+      margin: 50px;
+    }
+
+    &#experience {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: 65px 1fr;
+
+      & > .label-wrapper {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr 3fr 1fr;
+
+        @media (min-width: 768px) {
+          grid-template-columns: 120px 6fr 1fr;
+        }
+
+        margin-left: 15px;
+        border-radius: 1000px;
+
+        transition: background-color 0.25s;
+
+        &:hover {
+          background-color: #ccc;
+          cursor: pointer;
+
+          & > svg {
+            transform: translateX(1.5vw);
+          }
+        }
+      }
+    }
+  }
+
+  h4, h5 {
+    margin: 0;
+    color: #333;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  h5 {
+    font-weight: normal;
+    font-size: 0.8rem;
+  }
+
+  svg#arrow-svg {
+    height: 45px;
+    fill: var(--standard-gradient);
+    margin: 0 auto;
+    transition: transform 0.25s;
+  }
 }
