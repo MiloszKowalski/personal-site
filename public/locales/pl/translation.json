@@ -34,5 +34,10 @@
       "p2": "Copyright Miłosz Kowalski ",
       "p3": ". Wszelkie prawa zastrzeżone."
     }
+  },
+  "resume": {
+    "experience": "DOŚWIADCZENIE",
+    "techstack": "TECH STACK",
+    "skills": "UMIEJĘTNOŚCI"
   }
 }
