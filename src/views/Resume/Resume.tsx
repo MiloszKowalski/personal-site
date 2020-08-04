@@ -7,7 +7,7 @@ import InstagramIcon from 'components/svg/icons/Instagram.svg';
 import GlobeIcon from 'components/svg/icons/Globe.svg';
 import PhoneIcon from 'components/svg/icons/Phone.svg';
 import EmailIcon from 'components/svg/icons/Email.svg';
-import { ReactComponent as ResumeTop } from 'views/Resume/svg/resume-top.svg';
+import { ReactComponent as ResumeTop } from 'views/Resume/svg/ResumeTop.svg';
 
 const Resume: React.FC = () => {
   return (
