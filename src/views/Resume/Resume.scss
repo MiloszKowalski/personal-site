@@ -192,7 +192,6 @@ section.resume-section {
           grid-template-columns: 120px 6fr 1fr;
         }
 
-        margin-left: 15px;
         border-radius: 1000px;
 
         transition: background-color 0.25s;
@@ -202,7 +201,7 @@ section.resume-section {
           cursor: pointer;
 
           & > svg {
-            transform: translateX(1.5vw);
+            animation: arrow-right 0.5s;
           }
         }
       }
@@ -229,5 +228,17 @@ section.resume-section {
     fill: var(--standard-gradient);
     margin: 0 auto;
     transition: transform 0.25s;
+  }
+}
+
+@keyframes arrow-right {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(1.5vw);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
