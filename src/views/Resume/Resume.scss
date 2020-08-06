@@ -285,6 +285,38 @@ section.resume-section {
       }
     }
   }
+
+  ul#skills-list {
+    margin: 20px 30px;
+
+    @media(min-width: 768px) {
+      margin: 20px 50px;
+    }
+    li {
+      color: #333;
+      margin: 10px 0;
+      font-size: 0.9rem;
+
+      b {
+        font-weight: 600;
+      }
+
+      &::before {
+        content: '> ';
+        position: relative;
+        right: 15px;
+        margin-right: -8px;
+        display: inline-block;
+        font-weight: bold;
+        background: linear-gradient(180deg, var(--gradient-start), var(--gradient-end));
+        background-size: 300% 200%;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        transform: scaleY(1.6);
+      }
+    }
+  }
 }
 
 @keyframes arrow-right {

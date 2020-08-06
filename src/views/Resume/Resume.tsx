@@ -144,6 +144,13 @@ const Resume: React.FC = () => {
           </div>
           <h1>{ t('resume.skills') }</h1>
         </header>
+        <ul id="skills-list">
+          <li><b>{ t('resume.skills-list.english-label') }</b> - { t('resume.skills-list.english') }</li>
+          <li><b>{ t('resume.skills-list.abstract-label') }</b> - { t('resume.skills-list.abstract') }</li>
+          <li><b>{ t('resume.skills-list.uiux-label') }</b> - { t('resume.skills-list.uiux') }</li>
+          <li><b>{ t('resume.skills-list.version-label') }</b> - { t('resume.skills-list.version') }</li>
+          <li><b>{ t('resume.skills-list.teamwork-label') }</b></li>
+        </ul>
       </section>
     </div>
   );
