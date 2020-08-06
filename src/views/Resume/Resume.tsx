@@ -12,6 +12,9 @@ import ExperienceIcon from './svg/ExperienceIcon.svg';
 import TechStackIcon from './svg/TechStackIcon.svg';
 import SkillsIcon from './svg/SkillsIcon.svg';
 import FollowUPLogo from './svg/FollowUPLogo.svg';
+import BackendIcon from './svg/BackendIcon.svg';
+import FrontendIcon from './svg/FrontendIcon.svg';
+import DesignIcon from './svg/DesignIcon.svg';
 import { ReactComponent as ArrowIcon } from 'components/svg/icons/ArrowIcon.svg';
 import { ReactComponent as TimeLineEN } from './svg/TimeLineEN.svg';
 import { ReactComponent as TimeLinePL } from './svg/TimeLinePL.svg';
@@ -82,6 +85,57 @@ const Resume: React.FC = () => {
           </div>
           <h1>{ t('resume.techstack') }</h1>
         </header>
+        <ul className="tech-stack">
+          <li className="tech-stack-item">
+            <div className="resume-icon-wrapper big-wrapper">
+              <img id="backend-icon" src={ BackendIcon } alt="backend" />
+            </div>
+            <div className="tech-stack-description">
+              <h6>BACKEND</h6>
+              <ul>
+                <li><b>C#</b> - { t('resume.tech.backend.C#') }</li>
+                <li><b>ASP.NET Core</b> - { t('resume.tech.backend.ASPNET Core') }</li>
+                <li><b>.NET</b> - { t('resume.tech.backend.NET') }</li>
+                <li><b>autofac</b> - { t('resume.tech.backend.autofac') }</li>
+                <li><b>xUnit.net</b> - { t('resume.tech.backend.xUnitnet') }</li>
+              </ul>
+            </div>
+          </li>
+          <li className="tech-stack-item">
+            <div className="resume-icon-wrapper big-wrapper">
+              <img id="frontend-icon" src={ FrontendIcon } alt="frontend" />
+            </div>
+            <div className="tech-stack-description">
+              <h6>FRONTEND</h6>
+              <ul>
+                <li><b>JavaScript</b> - { t('resume.tech.frontend.JavaScript') }</li>
+                <li><b>React.js</b> - { t('resume.tech.frontend.Reactjs') }</li>
+                <li><b>Vue.js</b> - { t('resume.tech.frontend.Vuejs') }</li>
+                <li><b>axios</b> - { t('resume.tech.frontend.axios') }</li>
+                <li><b>Jest</b> - { t('resume.tech.frontend.Jest') }</li>
+              </ul>
+            </div>
+          </li>
+          <li className="tech-stack-item">
+            <div className="resume-icon-wrapper big-wrapper">
+              <img id="design-icon" src={ DesignIcon } alt="design" />
+            </div>
+            <div className="tech-stack-description">
+              <h6>DESIGN</h6>
+              <ul>
+                <li><b>Photoshop</b> - { t('resume.tech.design.Photoshop') }</li>
+                <li><b>Illustrator</b> - { t('resume.tech.design.Illustrator') }</li>
+                <li><b>Premiere Pro</b> - { t('resume.tech.design.PremierePro') }</li>
+                <li><b>After Effects</b> - { t('resume.tech.design.AfterEffects') }</li>
+                <li><b>Figma/Adobe Xd</b> - { t('resume.tech.design.figmaadobexd') }</li>
+              </ul>
+            </div>
+          </li>
+          <li id="tools-stack" className="tech-stack-item">
+            <h6>TOOLS</h6>
+            <span id="tools-span">Visual Studio 2019, VS Code, Postman, MMSM, SSH, Git Bash, FileZilla SFTP</span>
+          </li>
+        </ul>
       </section>
       <section className="resume-section">
         <header>
