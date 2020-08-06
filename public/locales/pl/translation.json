@@ -61,6 +61,17 @@
         "AfterEffects": "animacje klatek kluczowych, animacje typu motion graphics;",
         "figmaadobexd": "podstawowe projektowanie i prototypowanie UI/UX."
       }
+    },
+    "skills-list": {
+      "english-label": "Język angielski",
+      "english": "płynny, umożliwiający komunikację, a także tworzenie oraz czytanie dokumentacji technicznej;",
+      "abstract-label": "Abstrakcyjne myślenie",
+      "abstract": "rozwiązywanie problemów, rozbijanie ich na mniejsze,",
+      "uiux-label": "Fundamenty UI/UX oraz projektowania graficznego",
+      "uiux": "interfejsy, logo, animacje,",
+      "version-label": "Kontrola wersji",
+      "version": "Git/GitHub,",
+      "teamwork-label": "Praca w zepsole oraz zdolność szybkiej nauki."
     }
   }
 }
