@@ -5,6 +5,14 @@ a {
   color: #fff;
 }
 
+.view-wrapper.resume {
+  @media (min-width: 1500px) {
+    max-width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 150px;
+  }
+}
+
 header#name {
   color: #fff;
   text-align: center;
@@ -23,22 +31,55 @@ header#name {
     font-size: 0.8em;
     font-weight: 600;
   }
+
+  @media (min-width: 1024px) {
+    width: 50%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    h1 {
+      font-size: 3em;
+    }
+
+    h2 {
+      font-size: 1.2em;
+    }
+  }
 }
 
 .grid-contact-wrapper {
   padding: 15px;
   padding-top: 185px;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 120px;
+  }
 }
 
 .resume-top {
   background: linear-gradient(220deg, var(--gradient-start), var(--gradient-end));
+
+  @media (min-width: 1024px) {
+    display: grid;
+  }
 }
 
 ul {
   list-style: none;
-  color: #fff;
   margin: 0;
   padding: 0;
+}
+
+.resume-top ul {
+  color: #fff;
+
+  @media (min-width: 1024px) {
+    margin: 0 5vw;
+  }
 }
 
 .resume-photo-wrapper {
@@ -52,6 +93,14 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 1024px) {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: -80px;
+    margin-bottom: -130px;
+  }
 
   .resume-photo {
     background: var(--standard-gradient);
