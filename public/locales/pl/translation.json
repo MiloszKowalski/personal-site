@@ -66,11 +66,11 @@
       "english-label": "Język angielski",
       "english": "płynny, umożliwiający komunikację, a także tworzenie oraz czytanie dokumentacji technicznej;",
       "abstract-label": "Abstrakcyjne myślenie",
-      "abstract": "rozwiązywanie problemów, rozbijanie ich na mniejsze,",
+      "abstract": "rozwiązywanie problemów, rozbijanie ich na mniejsze;",
       "uiux-label": "Fundamenty UI/UX oraz projektowania graficznego",
-      "uiux": "interfejsy, logo, animacje,",
+      "uiux": "interfejsy, logo, animacje;",
       "version-label": "Kontrola wersji",
-      "version": "Git/GitHub,",
+      "version": "Git/GitHub;",
       "teamwork-label": "Praca w zepsole oraz zdolność szybkiej nauki."
     }
   }

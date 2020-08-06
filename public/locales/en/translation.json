@@ -66,11 +66,11 @@
       "english-label": "English",
       "english": "fluent, allowing communication and reading (or creating) technical documentation;",
       "abstract-label": "Abstract thinking",
-      "abstract": "problem solving, splitting them into smaller ones,",
+      "abstract": "problem solving, splitting them into smaller ones;",
       "uiux-label": "UI/UX and design fundamentals",
-      "uiux": "user interfaces, logo, animations,",
+      "uiux": "user interfaces, logo, animations;",
       "version-label": "Version Control",
-      "version": "Git/GitHub,",
+      "version": "Git/GitHub;",
       "teamwork-label": "Teamwork and fast learning."
     }
   }
