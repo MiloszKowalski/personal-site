@@ -38,6 +38,29 @@
   "resume": {
     "experience": "DOŚWIADCZENIE",
     "techstack": "TECH STACK",
-    "skills": "UMIEJĘTNOŚCI"
+    "skills": "UMIEJĘTNOŚCI",
+    "tech": {
+      "backend": {
+        "C#": "dobra znajomość języka - zaawansowana asynchroniczność, praktyki SOLID, wzorce projektowe;",
+        "ASPNET Core": "tworzenie WebAPI z wykorzystaniem wzorca MVC;",
+        "NET": "znajomość środowiska, w szczególności w wersji Core;",
+        "autofac": "podstawy Dependency Injection;",
+        "xUnitnet": "podstawowe testy jednostkowe."
+      },
+      "frontend": {
+        "JavaScript": "ECMAScript 6+, podstawy TypeScript, podstawowa znajomość ekosystemu JS;",
+        "Reactjs": "create-react-app, JSX, Context, Hooks;",
+        "Vuejs": "Vue CLI, transitions, filters, async components, Vuex store;",
+        "axios": "podstawowe zapytania do REST API, request middleware;",
+        "Jest": "podstawowe testy jednostkowe."
+      },
+      "design": {
+        "Photoshop": "korekta i manipulacja fotografii, warstwy, maski, dopasowania etc.;",
+        "Illustrator": "budowanie kształtów, projektowanie logo, eksportowanie do formatu SVG;",
+        "PremierePro": "montaż i synchronizacja wideo, podstawowa korekcja kolorów;",
+        "AfterEffects": "animacje klatek kluczowych, animacje typu motion graphics;",
+        "figmaadobexd": "podstawowe projektowanie i prototypowanie UI/UX."
+      }
+    }
   }
 }

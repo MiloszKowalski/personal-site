@@ -38,6 +38,29 @@
   "resume": {
     "experience": "EXPERIENCE",
     "techstack": "TECH STACK",
-    "skills": "SKILLS"
+    "skills": "SKILLS",
+    "tech": {
+      "backend": {
+        "C#": "solid understanding of the language - advanced async, SOLID principles, design patterns;",
+        "ASPNET Core": "creating WebAPI using MVC pattern;",
+        "NET": "familarity with the runtime environment, especially .NET Core;",
+        "autofac": "basics of Dependency Injection;",
+        "xUnitnet": "basic unit testing."
+      },
+      "frontend": {
+        "JavaScript": "ECMAScript 6+, basics of TypeScript, basic knowledge of JS ecosystem;",
+        "Reactjs": "create-react-app, JSX, Context, Hooks;",
+        "Vuejs": "Vue CLI, transitions, filters, async components, Vuex store;",
+        "axios": "basic REST API requests; request middleware;",
+        "Jest": "basic unit testing."
+      },
+      "design": {
+        "Photoshop": "image correction and manipulation; layers, masks, adjustments etc.;",
+        "Illustrator": "shape building; logo design; exporting to SVG format;",
+        "PremierePro": "video editing, syncing, montage; basic color correction;",
+        "AfterEffects": "keyframe-based animations; basic motion graphics;",
+        "figmaadobexd": "basic design and prototyping for UI/UX."
+      }
+    }
   }
 }
