@@ -4,16 +4,6 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 1024px) {
-  html {
-    scroll-snap-type: y proximity;
-  }
-}
-
-section {
-  scroll-snap-align: center;
-}
-
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
