@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.82 21.82">
+  <defs>
+    <style>
+      .a {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        fill: url(#a);
+      }
+
+      .b {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="a" data-name="Gradient bez nazwy 20" x1="0.5" y1="10.91" x2="21.32" y2="10.91" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6523b8"/>
+      <stop offset="0.47" stop-color="#8629cc"/>
+      <stop offset="1" stop-color="#a72fe0"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <rect class="a" x="0.5" y="0.5" width="20.82" height="20.82"/>
+    <g>
+      <path class="b" d="M7.54,12.67l-1,3H5.27L8.53,6.1H10l3.27,9.59H12l-1-3Zm3.15-1L9.75,8.94c-.21-.62-.36-1.19-.5-1.75h0c-.14.57-.3,1.16-.48,1.74L7.8,11.7Z"/>
+      <path class="b" d="M16,6.87a.78.78,0,0,1-1.55,0,.76.76,0,0,1,.78-.78A.74.74,0,0,1,16,6.87Zm-1.4,8.82V8.8h1.25v6.89Z"/>
+    </g>
+  </g>
+</svg>
