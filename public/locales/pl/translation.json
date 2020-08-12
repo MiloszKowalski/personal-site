@@ -43,7 +43,7 @@
       "backend": {
         "C#": "dobra znajomość języka - zaawansowana asynchroniczność, praktyki SOLID, wzorce projektowe;",
         "ASPNET Core": "tworzenie WebAPI z wykorzystaniem wzorca MVC;",
-        "NET": "znajomość środowiska, w szczególności w wersji Core;",
+        "NET": "znajomość środowiska, w szczególności .NET Core;",
         "autofac": "podstawy Dependency Injection;",
         "xUnitnet": "podstawowe testy jednostkowe."
       },
@@ -72,6 +72,32 @@
       "version-label": "Kontrola wersji",
       "version": "Git/GitHub;",
       "teamwork-label": "Praca w zepsole oraz zdolność szybkiej nauki."
+    },
+    "modal-description": {
+      "experience": {
+        "FollowUP": "automatyzacja mediów społecznościowych - tworzenie i utrzymywanie oprogramowania serwerowego obsługującego interakcję użytkowników oraz automatyzację profili Instagram (ASP.Net Core); tworzenie panelu użytkownika do zarządzania usługami (Vue.js); zarządzanie bazą danych MSSQL; identyfikacja wizualna; stworzenie landing page z opisem usług."
+      },
+      "backend": {
+        "CSharp": "dobra znajomość języka - delegaty (z wyrażeniami lambda, Action oraz Func), typy ogólne (generics), odbicie (reflection), zaawansowana asynchroniczność etc.; praktyki SOLID; wzorce projektowe - Factory, Template Method, Repository, Singleton, Observer etc.",
+        "ASPNET Core": "tworzenie WebAPI z wykorzystaniem wzorca MVC, uwierzytelnianie i autoryzacja z użyciem JSON Web Tokens; BackgroundService; EntityFramework Core + MSSQL",
+        "NET": "znajomość środowiska, w szczególności .NET Core",
+        "autofac": "podstawy DI; rejestrowanie oraz wydawanie serwisów; zasięgi żywotności",
+        "xUnitnet": "podstawowe testy jednostkowe"
+      },
+      "frontend": {
+        "JavaScript": "ECMAScript 6+; Funkcje tablic; Promises, async/await, local storage; podstawy TypeScript - typy, interfejsy, generyki; podstawowa znajomość ekosystemu JS (Webpack, Babel, ESLint); wiedza na temat propagacji zdarzeń oraz pętli zdarzeń",
+        "Reactjs": "create-react-app; JSX; komponenty funkcyjne oraz klasowe; Komponenty Wyższego Rzędu; Render props; Context; Hooks",
+        "Vuejs": "Vue CLI; transitions; filters; async components; Vuex store",
+        "axios": "podstawowe zapytania do REST API; request middleware",
+        "Jest": "podstawowe testy jednostkowe"
+      },
+      "design": {
+        "Photoshop": "korekta i manipulacja fotografii; warstwy, maski, dopasowania etc",
+        "Illustrator": "budowanie kształtów; projektowanie logo; eksportowanie do formatu SVG",
+        "Premiere Pro": "montaż i synchronizacja wideo; podstawowa korekcja kolorów",
+        "AfterEffects": "animacje klatek kluczowych; animacje typu motion graphics",
+        "figmaadobexd": "podstawowe projektowanie i prototypowanie UI/UX"
+      }
     }
   }
 }

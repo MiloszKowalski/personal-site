@@ -72,6 +72,32 @@
       "version-label": "Version Control",
       "version": "Git/GitHub;",
       "teamwork-label": "Teamwork and fast learning."
+    },
+    "modal-description": {
+      "experience": {
+        "FollowUP": "social media automation - creating and maintaining server software responsible for user interaction and Instagram profiles automation (ASP.Net Core); creating client's dashboard for managing the services (Vue.js); managing MSSQL database; visual identification; creation of the landing page with services' description."
+      },
+      "backend": {
+        "CSharp": "solid understanding of the language - delegates (with lambdas, Action and Func), generics, reflection, advanced async etc.; SOLID principles; design patterns - Factory, Template Method, Repository, Singleton, Observer etc.",
+        "ASPNET Core": "creating WebAPI using MVC pattern, authentication and authorization using  JSON Web Tokens; background services; EntityFramework Core + MSSQL",
+        "NET": "familarity with the runtime environment, especially .NET Core, knowledge of its frameworks and platforms",
+        "autofac": "basics of Dependency Injection; registering and resolving services; lifetime scopes",
+        "xUnitnet": "basic unit testing"
+      },
+      "frontend": {
+        "JavaScript": "ECMAScript 6+; Array functions; Promises, async/await, local storage; basics of TypeScript - types, interfaces, generics; basic understanding of JavaScript ecosystem (Webpack, Babel, ESLint); knowledge of event propagation and event loop",
+        "Reactjs": "create-react-app; JSX; functional and class components; Higher Order Components; Render Props; Context; Hooks",
+        "Vuejs": "Vue CLI; transitions; filters; async components; Vuex store",
+        "axios": "basic REST API requests; request middleware",
+        "Jest": "basic unit testing"
+      },
+      "design": {
+        "Photoshop": "image correction and manipulation; layers, masks, adjustments etc.",
+        "Illustrator": "shape building; logo design; exporting to SVG format",
+        "Premiere Pro": "video editing, syncing, montage; basic color correction",
+        "AfterEffects": "keyframe-based animations; basic motion graphics",
+        "figmaadobexd": "basic design and prototyping for UI/UX"
+      }
     }
   }
 }
