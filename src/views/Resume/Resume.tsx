@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ModalContext } from 'contexts/ModalContext';
 import { useTranslation } from 'react-i18next';
 import ContactLabel from 'components/Resume/ContactLabel';
 import './Resume.scss';
@@ -22,6 +23,8 @@ import { ReactComponent as ResumeTop } from 'views/Resume/svg/ResumeTop.svg';
 
 const Resume: React.FC = () => {
   const { t, i18n } = useTranslation();
+  const { openModal } = useContext(ModalContext);
+
   return (
     <div className="view-wrapper resume">
       <section className="resume-top">
@@ -66,7 +69,7 @@ const Resume: React.FC = () => {
           <div className="resume-timeline">
             {  i18n.language === 'pl' ? (<TimeLinePL />) : (<TimeLineEN />) }
           </div>
-          <div className="label-wrapper">
+          <div className="label-wrapper" onClick={ () => openModal('FollowUP') }>
             <div className="resume-icon-wrapper big-wrapper">
               <img id="followup" src={ FollowUPLogo } alt="FollowUP" />
             </div>
@@ -86,7 +89,7 @@ const Resume: React.FC = () => {
           <h1>{ t('resume.techstack') }</h1>
         </header>
         <ul className="tech-stack">
-          <li className="tech-stack-item">
+          <li className="tech-stack-item" onClick={ () => openModal('BACKEND') }>
             <div className="resume-icon-wrapper big-wrapper">
               <img id="backend-icon" src={ BackendIcon } alt="backend" />
             </div>
@@ -101,7 +104,7 @@ const Resume: React.FC = () => {
               </ul>
             </div>
           </li>
-          <li className="tech-stack-item">
+          <li className="tech-stack-item" onClick={ () => openModal('FRONTEND') }>
             <div className="resume-icon-wrapper big-wrapper">
               <img id="frontend-icon" src={ FrontendIcon } alt="frontend" />
             </div>
@@ -116,7 +119,7 @@ const Resume: React.FC = () => {
               </ul>
             </div>
           </li>
-          <li className="tech-stack-item">
+          <li className="tech-stack-item" onClick={ () => openModal('DESIGN') }>
             <div className="resume-icon-wrapper big-wrapper">
               <img id="design-icon" src={ DesignIcon } alt="design" />
             </div>

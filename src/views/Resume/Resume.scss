@@ -116,6 +116,16 @@ svg#resume-top {
   bottom: -5px;
 }
 
+.resume-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  background: linear-gradient(225deg, var(--gradient-start), var(--gradient-end));
+  box-shadow: 0 0 5px 1px rgba(185, 62, 241, 0.9);
+}
+
 section.resume-section {
   &#experience {
     padding-top: 50px;
@@ -129,16 +139,6 @@ section.resume-section {
     @media (min-width: 768px) {
       grid-template-columns: 80px 1fr;
     }
-  }
-
-  .resume-icon-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-
-    background: linear-gradient(225deg, var(--gradient-start), var(--gradient-end));
-    box-shadow: 0 0 5px 1px rgba(185, 62, 241, 0.9);
   }
 
   .header-wrapper {
@@ -293,7 +293,17 @@ section.resume-section {
   .tech-stack-item {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 20px;
+    padding: 20px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #ccc;
+
+      &:last-of-type {
+        cursor: default;
+        background-color: #fff;
+      }
+    }
 
     & .big-wrapper {
       margin: 20px auto;
@@ -323,7 +333,7 @@ section.resume-section {
     &#tools-stack {
       grid-template-columns: 1fr;
       @media (min-width: 768px){
-        margin-left: 160px;
+        padding-left: 160px;
       }
 
       & #tools-span {
