@@ -103,8 +103,10 @@ ul {
   }
 
   .resume-photo {
-    background: var(--standard-gradient);
+    background: url('./img/resume-photo.jpg');
     border-radius: 1000px;
+    background-size: 175%;
+    background-position: center;
     width: 90%;
     height: 90%;
     z-index: 1;
