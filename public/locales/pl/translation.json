@@ -99,5 +99,22 @@
         "figmaadobexd": "podstawowe projektowanie i prototypowanie UI/UX"
       }
     }
+  },
+  "portfolio": {
+    "backend": {
+      "followup-backend": {
+        "title": "FollowUP - automatyzacja mediów społecznościowych"
+      }
+    },
+    "frontend": {
+      "followup-dashboard": {
+        "title": "FollowUP - panel zarządzania"
+      }
+    },
+    "design": {
+      "followup-design": {
+        "title": "FollowUP - identyfikacja graficzna"
+      }
+    }
   }
 }
