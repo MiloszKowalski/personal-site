@@ -27,6 +27,9 @@ function App() {
                 <Route exact path="/resume">
                   <Resume />
                 </Route>
+                <Route path="/portfolio">
+                  <Portfolio />
+                </Route>
               </Switch>
             </div>
           </Router>
