@@ -21,8 +21,8 @@ const Modal: React.FC = () => {
   }, [isVisible]);
 
   return (
-    <div className={`modal-wrapper ${isVisible ? 'visible' : ''}`}>
-      <div className="modal">
+    <div onClick={closeModal} className={`modal-wrapper ${isVisible ? 'visible' : ''}`}>
+      <div onClick={(e) => e.stopPropagation()} className="modal">
         <header className="modal-header">
           <div className="modal-icon-wrapper">
             <currentModal.icon />
