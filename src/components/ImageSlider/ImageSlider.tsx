@@ -122,7 +122,8 @@ const ImageSlider: React.FC<Props> = ({ images }) => {
 
   return (
     <div className="slider-wrapper" >
-      <div className="pictures-slider" style={{transform: `translateX(${ currentOffset }px)`}}>
+      <div className="pictures-slider" ref={ imageSlider }
+      style={{transform: `translateX(${ currentOffset }px)`}}>
         { images?.map(image => (
           <div onClick={ () => openImageModal(image, images) }
             key={ image } className="slider-image" ref={ sliderImage }
