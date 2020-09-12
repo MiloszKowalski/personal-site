@@ -2,8 +2,7 @@
 @import 'styles/breakpoints';
 
 nav.TopMenu {
-  width: 100vw;
-  max-width: 100%;
+  width: 100%;
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -55,6 +54,7 @@ nav.TopMenu {
     @media (max-width: 1024px) {
       position: fixed;
       margin: 0;
+      margin-top: 50px;
       padding: 0;
       top: 0;
       bottom: 0;
@@ -286,8 +286,7 @@ nav.TopMenu {
   visibility: hidden;
   transition: opacity 0.25s, visibility 0.25s;
   @media (max-width: 1024px) {
-    width: 100vw;
-    max-width:100%;
+    width:100%;
     height: 100vh;
     background-color: rgba(0,0,0,0.7);
     position: absolute;
