@@ -1,7 +1,7 @@
 import React, { useContext, useLayoutEffect, useState } from 'react';
 import { useScrollPosition } from 'utils/useScrollPosition';
 import { TopMenuContext } from 'contexts/TopMenuContext';
-import { withRouter, RouteComponentProps } from 'react-router-dom';
+import { Link, withRouter, RouteComponentProps } from 'react-router-dom';
 import Navigation from './Navigation';
 import './TopMenu.scss';
 
@@ -54,9 +54,11 @@ const TopMenu: React.FC<RouteComponentProps> = ({location}: RouteComponentProps)
       ${isDocked && location.pathname === '/' ? 'docked' : 'normal'}
       ${scrolledDown && !isExpanded ? 'hidden' : ''}`
     }>
-      <div className="topmenu-logo">
-        <h1><b>M</b>K</h1>
-      </div>
+      <Link to="/">
+        <div className="topmenu-logo">
+          <h1><b>M</b>K</h1>
+        </div>
+      </Link>
       <Navigation />
     </nav>
   )
