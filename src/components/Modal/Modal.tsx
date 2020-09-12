@@ -16,8 +16,11 @@ const Modal: React.FC = () => {
       document.body.style.overflow = 'hidden';
     }
     else {
-      document.body.style.overflow = 'unset';
-      document.body.style.marginRight = '0';
+      // Wait for the transition to finish
+      setTimeout(() => {
+        document.body.style.overflow = 'unset';
+        document.body.style.marginRight = '0';
+      }, 250);
     }
   }, [isVisible]);
 
