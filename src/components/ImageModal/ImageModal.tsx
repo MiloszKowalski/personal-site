@@ -33,9 +33,6 @@ const Modal: React.FC = () => {
             className="slider-arrow modal-arrow right"><ArrowIcon /></div>
         </div>
       </div>
-      <a href={ currentImageUri } target="_blank" rel="noopener noreferrer">
-        <p><b>Source:</b> { currentImageUri }</p>
-      </a>
     </div>
   );
 }
