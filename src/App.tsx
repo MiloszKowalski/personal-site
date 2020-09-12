@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from 'views/Home/Home';
 import Resume from 'views/Resume/Resume';
 import Portfolio from 'views/Portfolio/Portfolio';
+import ScrollToTop from 'components/ScrollToTop';
 import 'styles/animate-svg.scss';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <ImageModalContextProvider>
           <Router>
             <div className="App">
+              <ScrollToTop />
               <TopMenu />
               <Modal />
               <ImageModal />

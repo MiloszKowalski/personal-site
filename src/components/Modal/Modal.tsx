@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useRef, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ModalContext } from 'contexts/ModalContext';
 import { ReactComponent as CloseIcon } from 'components/svg/icons/CloseIcon.svg';
@@ -7,6 +7,7 @@ import './Modal.scss';
 
 const Modal: React.FC = () => {
   const { isVisible, currentModal, closeModal } = useContext(ModalContext);
+  const modal = useRef<HTMLDivElement>(null);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -18,6 +19,7 @@ const Modal: React.FC = () => {
     else {
       // Wait for the transition to finish
       setTimeout(() => {
+        modal.current?.scrollTo(0,0);
         document.body.style.overflow = 'unset';
         document.body.style.marginRight = '0';
       }, 250);
@@ -41,7 +43,7 @@ const Modal: React.FC = () => {
         <div id="modal-wave-svg">
           <ModalWaveMask />
         </div>
-        <section className="modal-content">
+        <section ref={ modal } className="modal-content">
           { currentModal.position !== undefined ? (<h3>{ currentModal.position }</h3>) : ''}
           { t(currentModal.description) }
           <ul className="modal-item-list">
