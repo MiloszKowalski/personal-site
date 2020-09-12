@@ -43,7 +43,7 @@ const Resume: React.FC = () => {
               rel="noopener noreferrer" target="_blank">
               <li><ContactLabel svgSrc={ GithubIcon } label="/MiloszKowalski" /></li>
             </a>
-            <a href="https://www.linkedin.com/in/miłosz-kowalski-462404180/"
+            <a href="https://www.linkedin.com/in/mkowalskidev/"
                 rel="noopener noreferrer" target="_blank">
               <li><ContactLabel svgSrc={ LinkedInIcon } label="/mkowalskidev" /></li>
             </a>
