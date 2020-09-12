@@ -40,7 +40,7 @@ const Home: React.FC = () => {
         <div className="socialmedia-container">
           <a href="https://github.com/MiloszKowalski"
             rel="noopener noreferrer" target="_blank"><GithubIcon /></a>
-          <a href="https://www.linkedin.com/in/miłosz-kowalski-462404180/"
+          <a href="https://www.linkedin.com/in/mkowalskidev/"
             rel="noopener noreferrer" target="_blank"><LinkedInIcon /></a>
           <a href="https://www.instagram.com/mkowalski.dev/"
             rel="noopener noreferrer" target="_blank"><InstagramIcon /></a>
@@ -88,9 +88,6 @@ const Home: React.FC = () => {
         <img id="footer-img" src={ designTwo } alt="background" />
       </section>
       <footer>
-        <div className="social-wrapper">
-
-        </div>
         <div className="copyright">
           <p>{ t('homepage.footer.p1') }</p>
           <p>{ t('homepage.footer.p2') } &copy;{ new Date().getFullYear() }
