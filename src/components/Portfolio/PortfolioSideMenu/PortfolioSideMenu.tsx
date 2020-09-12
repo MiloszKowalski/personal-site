@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { NavLink, useRouteMatch } from 'react-router-dom';
 import { ReactComponent as BackendIcon } from 'components/svg/icons/BackendIcon.svg';
 import { ReactComponent as FrontendIcon } from 'components/svg/icons/FrontendIcon.svg';
 import { ReactComponent as DesignIcon } from 'components/svg/icons/DesignIcon.svg';
+import { ReactComponent as VerticalWave } from 'components/svg/VerticalWave.svg';
+import { ReactComponent as HorizontalWaveMask } from 'components/svg/HorizontalWaveMask.svg';
+import { breakpoints } from 'utils/mediaBreakpoints';
+import Media from 'react-media';
 import './PortfolioSideMenu.scss';
 
 const PortfolioSideMenu: React.FC = () => {
@@ -36,6 +40,16 @@ const PortfolioSideMenu: React.FC = () => {
         </li>
         </NavLink>
       </ul>
+      <div className="side-menu-wave">
+        <Media queries={breakpoints}>
+            { matches => (
+              <Fragment>
+                { matches.phone && <HorizontalWaveMask id="horizontal-wave-mask" /> }
+                { matches.tabletAndAbove && <VerticalWave id="vertical-wave" /> }
+              </Fragment>
+            )}
+        </Media>
+      </div>
     </div>
   )
 }

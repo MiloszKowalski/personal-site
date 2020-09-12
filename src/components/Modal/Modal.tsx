@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ModalContext } from 'contexts/ModalContext';
 import { ReactComponent as CloseIcon } from 'components/svg/icons/CloseIcon.svg';
+import { ReactComponent as ModalWaveMask } from 'components/svg/ModalWaveMask.svg';
 import './Modal.scss';
 
 const Modal: React.FC = () => {
@@ -34,6 +35,9 @@ const Modal: React.FC = () => {
             <CloseIcon />
           </div>
         </header>
+        <div id="modal-wave-svg">
+          <ModalWaveMask />
+        </div>
         <section className="modal-content">
           { currentModal.position !== undefined ? (<h3>{ currentModal.position }</h3>) : ''}
           { t(currentModal.description) }

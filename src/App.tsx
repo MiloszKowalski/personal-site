@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from 'views/Home/Home';
 import Resume from 'views/Resume/Resume';
 import Portfolio from 'views/Portfolio/Portfolio';
+import 'styles/animate-svg.scss';
 
 function App() {
   return (

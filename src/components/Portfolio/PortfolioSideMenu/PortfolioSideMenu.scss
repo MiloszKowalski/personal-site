@@ -1,18 +1,35 @@
 .side-menu-wrapper {
   position: fixed;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   display: grid;
   text-align: center;
   z-index: 100;
+  grid-template-rows: 30px 1fr;
+  grid-template-areas:
+  "wave"
+  "list";
+
+  .side-menu-wave {
+    pointer-events: none;
+    width: 100%;
+    background: linear-gradient(270deg, var(--gradient-start), var(--gradient-end));
+    position: relative;
+    bottom: -2px;
+    clip-path: url(#side-menu-horizontal-wave-mask);
+    grid-area: wave;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
 
   h4 {
     margin: 0;
     font-size: 0.75rem;
     transition: opacity 0.25s, visibility 0.25s, transform 0.25s;
   }
-
-  background: linear-gradient(235deg, var(--gradient-start), var(--gradient-end));
 
   a {
     color: rgba(255, 255, 255, 0.5);
@@ -35,8 +52,12 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    overflow: auto;
+    overflow-y: hidden;
+    overflow-x: auto;
     padding: 0 20px;
+    grid-area: list;
+    background: linear-gradient(270deg, var(--gradient-start), var(--gradient-end));
+
 
     li {
       display: inline-block;
@@ -51,12 +72,35 @@
     left: 0;
     height: 100vh;
     width: auto;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 30px;
+    grid-template-areas: "list wave";
+    background: linear-gradient(180deg, var(--gradient-start), var(--gradient-end));
 
     h4 {
       opacity: 0;
       margin-top: 10px;
       visibility: hidden;
       transform: translateY(-20px);
+    }
+
+    .side-menu-wave {
+      width: 30px;
+      max-height: 100vh;
+      position: absolute;
+      top: 0;
+      background: linear-gradient(180deg, var(--gradient-start), var(--gradient-end));
+      clip-path: url(#side-menu-horizontal-wave-mask);
+      grid-area: wave;
+
+      svg {
+        width: 100%;
+        position: absolute;
+        right: -2px;
+        path {
+          fill: #fff;
+        }
+      }
     }
 
     a {
@@ -84,6 +128,8 @@
       margin-top: 80px;
       flex-flow: column;
       justify-content: start;
+      overflow-x: hidden;
+      background: transparent;
     }
   }
 }

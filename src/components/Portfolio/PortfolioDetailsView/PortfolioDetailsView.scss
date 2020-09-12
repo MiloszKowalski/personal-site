@@ -1,20 +1,16 @@
 .portfolio-details-wrapper {
-  display: grid;
   height: 100vh;
+  width: 100vw;
   margin: 0;
   overflow: auto;
   position: relative;
-  grid-template-areas:
-  "projectpreview"
-  "projectpredescription";
-  grid-template-columns: 1fr;
-  grid-template-rows: 5fr 4fr;
   padding-top: 100px;
 
   @media (min-width: 1024px) {
     padding-top: 50px;
+    display: grid;
     grid-template-areas: "projectdescription projectpreview";
-    grid-template-columns: 40vw 60vw;
+    grid-template-columns: 40% 60%;
     grid-template-rows: 1fr;
   }
 }
@@ -95,7 +91,7 @@
 
   @media (min-width: 1024px) {
     top: 50px;
-    right: 60vw;
+    right: 63vw;
     margin: 18px;
 
     & svg {
@@ -111,6 +107,7 @@
 
 .portfolio-project-preview {
   position: relative;
+  width: 100%;
 
   h1 {
     margin: 10px;
@@ -143,14 +140,13 @@
 
 .portfolio-project-title {
   overflow: auto;
-  width: 100vw;
-  max-width: 100%;
+  width: 100%;
   position: relative;
 }
 
 .portfolio-technology-label-wrapper {
   display: flex;
-  width: 100vw;
+  width: 100%;
   overflow: auto;
   padding: 10px;
 
@@ -185,13 +181,69 @@
 }
 
 .portfolio-project-description {
-  padding: 20px;
-  padding-top: 50px;
-  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
   color: #fff;
   position: relative;
+  min-height: calc(70vh - 215px);
+  width: 100%;
+  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+  background-attachment: fixed;
+
+  .description-text {
+    width: 100%;
+    padding: 20px;
+    word-wrap: wrap;
+    overflow: auto;
+  }
 
   @media (min-width: 1024px) {
     grid-area: projectdescription;
+    display: flex;
+    flex-direction: row-reverse;
+    grid-template-columns: 1fr 35px;
+    grid-template-areas: "text wave";
+
+    .description-text {
+      margin-top: 70px;
+      margin-right: 20px;
+      padding-top: 0;
+      direction: rtl;
+      overflow-y: auto;
+      p {
+        text-align: justify;
+        direction: ltr;
+      }
+    }
+  }
+}
+
+#portfolio-details-wave {
+  background: white;
+  transform: scaleY(-1) translateY(20px);
+  height: 50px;
+  width: 100%;
+  pointer-events: none;
+  clip-path: url(#side-menu-horizontal-wave-mask);
+
+  svg {
+    height: 40px;
+    width: 50%;
+  }
+
+  @media (min-width: 1024px) {
+    transform: initial;
+    flex-basis: 30px;
+    height: 100%;
+    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+    background-attachment: fixed;
+    overflow: hidden;
+
+    svg {
+      height: 100%;
+      width: 100%;
+
+      path {
+        fill: #fff;
+      }
+    }
   }
 }

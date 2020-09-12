@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: rgba(0,0,0,0.5);
   z-index: 10000;
@@ -20,7 +20,7 @@
 }
 
 .modal {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: #fff;
   position: relative;
@@ -36,19 +36,24 @@
 .modal-header {
   display: grid;
   align-items: center;
-  grid-template-columns: 120px 6fr 80px;
-  background: linear-gradient(225deg, var(--gradient-start), var(--gradient-end));
-  height: 25vh;
+  grid-template-columns: 140px 6fr 80px;
+  background: linear-gradient(270deg, var(--gradient-start), var(--gradient-end));
+  height: 20vh;
   color: #fff;
-
-  & div:not(.modal-close-icon) {
-    position: relative;
-    top: -15px;
-  }
 
   & h1 {
     text-transform: uppercase;
   }
+}
+
+#modal-wave-svg {
+  position: absolute;
+  top: calc(20vh - 2px);
+  width: 100%;
+  min-height: 80px;
+  pointer-events: none;
+  background: linear-gradient(270deg, var(--gradient-start), var(--gradient-end));
+  clip-path: url(#modal-wave-svg-mask);
 }
 
 .modal-icon-wrapper {
@@ -59,7 +64,7 @@
   height: 90px;
   padding: 10px;
   background-color: #fff;
-  margin: 20px;
+  margin: 20px auto;
 
   & svg {
     width: 80%;
@@ -98,7 +103,9 @@
 
 @media (min-width: 1024px) {
   #close-icon {
-    position: relative;
+    position: absolute;
+    right: 100px;
+    top: -10px;
 
     .close-a {
       fill: #fff;
@@ -114,13 +121,14 @@
   padding: 15px;
   padding-bottom: 100px;
   overflow-y: auto;
-  height: 75vh;
+  height: 80vh;
   line-height: 1.5;
   white-space: pre-wrap;
 
   @media (min-width: 1024px) {
-    height: 55vh;
+    height: 60vh;
     padding-bottom: 0;
+    padding-top: 25px;
   }
 }
 

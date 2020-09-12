@@ -1,0 +1,53 @@
+#hero-desktop-svg path:first-of-type {
+  animation: animateDesktopBlob 38s infinite linear;
+  transform-origin: 100% 100%;
+}
+
+@keyframes animateDesktopBlob {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#hero-mobile-svg path {
+  animation: slideMobileHeroWave 10s infinite linear;
+  transition: transform 0.25s;
+}
+
+@keyframes slideMobileHeroWave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#modal-wave-svg svg path, #side-menu-horizontal-wave-mask path {
+  animation: moveHorizontalWave 10s infinite linear;
+}
+
+@keyframes moveHorizontalWave {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+#vertical-wave path {
+  animation: moveVerticalWave 10s infinite linear;
+}
+
+@keyframes moveVerticalWave {
+  0% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}

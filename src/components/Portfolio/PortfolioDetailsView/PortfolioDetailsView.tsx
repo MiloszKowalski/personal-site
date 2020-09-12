@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link, useParams, useRouteMatch } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import Media from 'react-media';
 import { Project } from 'views/Portfolio/Portfolio';
 import { ReactComponent as BackArrowIcon } from 'components/svg/icons/BackArrowIcon.svg';
 import { ReactComponent as GithubIcon } from 'components/svg/icons/Github.svg';
 import ImageSlider from 'components/ImageSlider/ImageSlider';
+import { ReactComponent as VerticalWave } from 'components/svg/VerticalWave.svg';
+import { ReactComponent as HorizontalWaveMask } from 'components/svg/HorizontalWaveMask.svg';
+import { breakpoints } from 'utils/mediaBreakpoints';
 import './PortfolioDetailsView.scss';
 
 type Props = {
@@ -43,7 +47,19 @@ const PortfolioDetailsView: React.FC<Props> = ({ projects }) => {
         </div>
       </div>
       <div className="portfolio-project-description">
+      <div id="portfolio-details-wave">
+        <Media queries={breakpoints}>
+            { matches => (
+              <Fragment>
+                { matches.mobile && <HorizontalWaveMask /> }
+                { matches.desktop && <VerticalWave id="vertical-wave" /> }
+              </Fragment>
+            )}
+        </Media>
+      </div>
+      <div className="description-text">
         <p>{ t(projectInfo?.description || '') }</p>
+      </div>
       </div>
       <div className="portfolio-back-button">
         <Link to={ oneUrlLevelUp }>

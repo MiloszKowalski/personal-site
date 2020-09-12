@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import Typical from 'react-typical';
-import heroMobile from './svg/Hero-mobile.svg';
-import heroDesktop from './svg/Hero-desktop.svg';
+import { ReactComponent as HeroMobile } from './svg/Hero-mobile.svg';
+import { ReactComponent as HeroDesktop } from './svg/Hero-desktop.svg';
 import designOneMobile from './svg/Design1-mobile.svg';
 import designOneDesktop from './svg/Design1-desktop.svg';
 import designTwo from './svg/Design2.svg';
+import Media from 'react-media';
 import heroImage1 from './img/hero-image-1.png';
 import { ReactComponent as GithubIcon } from 'components/svg/icons/Github.svg';
 import { ReactComponent as LinkedInIcon } from 'components/svg/icons/LinkedIn.svg';
 import { ReactComponent as InstagramIcon } from 'components/svg/icons/Instagram.svg';
+import { breakpoints } from 'utils/mediaBreakpoints';
 import './Home.scss';
 
 const Home: React.FC = () => {
@@ -44,10 +46,14 @@ const Home: React.FC = () => {
             rel="noopener noreferrer" target="_blank"><InstagramIcon /></a>
         </div>
         <img id="hero-image" src={ heroImage1 } alt=""/>
-        <picture>
-          <source srcSet={`${heroMobile} 1x`} media="(max-width: 768px)" />
-          <img className="background-wave" srcSet={`${heroDesktop} 2x`} alt="background" />
-        </picture>
+        <Media queries={breakpoints}>
+          { matches => (
+            <Fragment>
+              { matches.mobile && <HeroMobile id="hero-mobile-svg" /> }
+              { matches.tabletAndAbove && <HeroDesktop id="hero-desktop-svg" /> }
+            </Fragment>
+          )}
+        </Media>
       </section>
       <section className="coding-with-passion">
         <div className="coding-text-wrapper">
