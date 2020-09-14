@@ -17,6 +17,16 @@ import contactPhotoDesktop from './img/contact-photo-desktop.png';
 import contactPhotoMobile from './img/contact-photo-mobile.png';
 import './Home.scss';
 
+function scrollToContact() {
+  const html = document.querySelector('html');
+  if(!html) {
+    return;
+  }
+  html.style.scrollBehavior = 'smooth';
+  document.querySelector('section#contact')?.scrollIntoView(true);
+  html.style.scrollBehavior = 'initial';
+}
+
 const Home: React.FC = () => {
   const { t } = useTranslation();
   const defaultTimeoutMS = 1200;
@@ -37,7 +47,7 @@ const Home: React.FC = () => {
           />
           </h2>
           <Link to="/portfolio"><div className="button">{ t('homepage.hero.button1') }</div></Link>
-          <a href="#contact"><div className="button alt">{ t('homepage.hero.button2') }</div></a>
+          <a onClick={ scrollToContact } ><div className="button alt">{ t('homepage.hero.button2') }</div></a>
         </div>
         <div className="socialmedia-container">
           <a href="https://github.com/MiloszKowalski"
