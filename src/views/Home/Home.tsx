@@ -91,14 +91,15 @@ const Home: React.FC = () => {
       <section id="contact">
         <h3 className="alt">{ t('contact.header') }</h3>
         <form method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
           <label htmlFor="name">{ t('contact.fullname') }*</label>
-          <input type="text" id="name" />
+          <input type="text" name="name" id="name" required />
           <label htmlFor="email">E-mail*</label>
-          <input type="text" id="email" />
+          <input type="text" name="email" id="email" required />
           <label htmlFor="phone">{ t('contact.phone') }</label>
-          <input type="text" id="phone" />
+          <input type="text" name="phone" id="phone" />
           <label htmlFor="content">{ t('contact.content') }*</label>
-          <textarea name="content" id="content" rows={10}></textarea>
+          <textarea name="content" id="content" rows={10} required></textarea>
           <button type="submit">{ t('contact.send') }</button>
         </form>
         <picture id="contact-photo">
