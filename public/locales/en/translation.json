@@ -116,5 +116,12 @@
         "title": "FollowUP - visual identification"
       }
     }
+  },
+  "contact": {
+    "header": "Contact me!",
+    "fullname": "Full Name",
+    "phone": "Phone",
+    "content": "Message",
+    "send": "Send"
   }
 }

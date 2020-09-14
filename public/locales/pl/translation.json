@@ -116,5 +116,12 @@
         "title": "FollowUP - identyfikacja graficzna"
       }
     }
+  },
+  "contact": {
+    "header": "Skontaktuj się ze mną!",
+    "fullname": "Imię i nazwisko",
+    "phone": "Nr telefonu",
+    "content": "Treść wiadomości",
+    "send": "Wyślij"
   }
 }
