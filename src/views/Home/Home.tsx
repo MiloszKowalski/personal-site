@@ -47,7 +47,7 @@ const Home: React.FC = () => {
           />
           </h2>
           <Link to="/portfolio"><div className="button">{ t('homepage.hero.button1') }</div></Link>
-          <a onClick={ scrollToContact } ><div className="button alt">{ t('homepage.hero.button2') }</div></a>
+          <button onClick={ scrollToContact } className="button alt">{ t('homepage.hero.button2') }</button>
         </div>
         <div className="socialmedia-container">
           <a href="https://github.com/MiloszKowalski"
