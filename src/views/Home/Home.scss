@@ -271,6 +271,7 @@ section.design-experience {
   margin-top: 100px;
   height: 105vh;
   background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+  background-attachment: fixed;
   position: relative;
   text-align: center;
   color: #fff;
@@ -328,12 +329,86 @@ section.design-experience {
   }
 }
 
+section#contact {
+  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  padding-bottom: 50%;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    label {
+      color: #fff;
+      margin: 20px auto 10px 5px;
+    }
+
+    input, textarea {
+      border-radius: 5px;
+      font-family: 'Montserrat', sans-serif;
+      border: none;
+      resize: none;
+      padding: 8px 10px;
+      border-bottom: 3px transparent solid;
+      transition: border 0.25s;
+
+      &:focus {
+        border-bottom: 3px var(--gradient-end) solid;
+        outline: none;
+      }
+    }
+
+    button {
+      margin: 20px auto;
+      background: #fff;
+      color: var(--gradient-end);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 100vw;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: transform 0.25s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  picture#contact-photo img {
+    width: 50%;
+    position: absolute;
+    left: 0;
+  }
+
+  @media (min-width: 1024px) {
+    padding-bottom: 10%;
+    form {
+      width: 30%;
+    }
+    picture#contact-photo img {
+      width: 20%;
+      top: 30%;
+      left: 10%;
+    }
+  }
+}
+
 #footer-img {
   grid-area: footer;
   width: 100%;
   position: absolute;
   bottom: -1px;
-  margin-top: 120px;
 }
 
 .copyright p {

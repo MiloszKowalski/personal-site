@@ -13,6 +13,8 @@ import { ReactComponent as GithubIcon } from 'components/svg/icons/Github.svg';
 import { ReactComponent as LinkedInIcon } from 'components/svg/icons/LinkedIn.svg';
 import { ReactComponent as InstagramIcon } from 'components/svg/icons/Instagram.svg';
 import { breakpoints } from 'utils/mediaBreakpoints';
+import contactPhotoDesktop from './img/contact-photo-desktop.png';
+import contactPhotoMobile from './img/contact-photo-mobile.png';
 import './Home.scss';
 
 const Home: React.FC = () => {
@@ -35,7 +37,7 @@ const Home: React.FC = () => {
           />
           </h2>
           <Link to="/portfolio"><div className="button">{ t('homepage.hero.button1') }</div></Link>
-          <Link to="/contact"><div className="button alt">{ t('homepage.hero.button2') }</div></Link>
+          <a href="#contact"><div className="button alt">{ t('homepage.hero.button2') }</div></a>
         </div>
         <div className="socialmedia-container">
           <a href="https://github.com/MiloszKowalski"
@@ -49,7 +51,7 @@ const Home: React.FC = () => {
         <Media queries={breakpoints}>
           { matches => (
             <Fragment>
-              { matches.mobile && <HeroMobile id="hero-mobile-svg" /> }
+              { matches.phone && <HeroMobile id="hero-mobile-svg" /> }
               { matches.tabletAndAbove && <HeroDesktop id="hero-desktop-svg" /> }
             </Fragment>
           )}
@@ -85,6 +87,24 @@ const Home: React.FC = () => {
         <div className="design-img-wrapper">
           PLACEHOLDER
         </div>
+      </section>
+      <section id="contact">
+        <h3 className="alt">{ t('contact.header') }</h3>
+        <form method="POST" data-netlify="true">
+          <label htmlFor="name">{ t('contact.fullname') }*</label>
+          <input type="text" id="name" />
+          <label htmlFor="email">E-mail*</label>
+          <input type="text" id="email" />
+          <label htmlFor="phone">{ t('contact.phone') }</label>
+          <input type="text" id="phone" />
+          <label htmlFor="content">{ t('contact.content') }*</label>
+          <textarea name="content" id="content" rows={10}></textarea>
+          <button type="submit">{ t('contact.send') }</button>
+        </form>
+        <picture id="contact-photo">
+          <source srcSet={`${contactPhotoMobile} 1x`} media="(max-width: 768px)" />
+          <img srcSet={`${contactPhotoDesktop} 2x`} alt="" />
+        </picture>
         <img id="footer-img" src={ designTwo } alt="background" />
       </section>
       <footer>
