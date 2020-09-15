@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from 'views/Home/Home';
 import Resume from 'views/Resume/Resume';
 import Portfolio from 'views/Portfolio/Portfolio';
+import About from 'views/About/About';
 import ScrollToTop from 'components/ScrollToTop';
 import 'styles/animate-svg.scss';
 
@@ -32,6 +33,9 @@ function App() {
                 </Route>
                 <Route path="/portfolio">
                   <Portfolio />
+                </Route>
+                <Route path="/about">
+                  <About />
                 </Route>
               </Switch>
             </div>
