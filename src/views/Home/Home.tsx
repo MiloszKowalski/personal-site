@@ -90,7 +90,7 @@ const Home: React.FC = () => {
           <h3 className="alt">{ t('homepage.experience with design.heading') }</h3>
           <p>{ t('homepage.experience with design.p1') }</p>
           <p>{ t('homepage.experience with design.p2') }</p>
-          <Link to="/resume"><div className="button">
+          <Link to="/portfolio/design"><div className="button">
             { t('homepage.experience with design.button') }
           </div></Link>
         </div>
