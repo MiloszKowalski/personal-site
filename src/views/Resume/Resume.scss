@@ -251,6 +251,11 @@ section.resume-section {
           grid-template-columns: 120px 6fr 1fr;
         }
 
+        @media (min-width: 1024px) {
+          margin: 0 2%;
+          width: 40%;
+        }
+
         border-radius: 1000px;
 
         transition: background-color 0.25s;
@@ -293,6 +298,8 @@ section.resume-section {
     display: grid;
     grid-template-columns: 1fr;
     padding: 20px;
+    transition: background-color 0.25s;
+    position: relative;
 
     &:hover {
       cursor: pointer;
@@ -308,6 +315,30 @@ section.resume-section {
       margin: 20px auto;
       width: 40vw;
       height: 40vw;
+      position: relative;
+
+      @media(max-width: 768px) {
+        &::after {
+          content: url('../../components/svg/icons/ZoomInIcon.svg');
+          display: block;
+          width: 36px;
+          height: 36px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          margin: 20px auto;
+          position: absolute;
+          bottom: -30%;
+          right: -5%;
+          border: 2px solid #fff;
+          background: linear-gradient(225deg, var(--gradient-start), var(--gradient-end));
+        }
+
+        &:last-of-type::after {
+          display: none;
+        }
+      }
     }
 
     @media (min-width: 768px) {
@@ -382,7 +413,7 @@ section.resume-section {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(1.5vw);
+    transform: translateX(25%);
   }
   100% {
     transform: translateX(0);
