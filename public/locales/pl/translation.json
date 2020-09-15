@@ -71,7 +71,7 @@
       "uiux": "interfejsy, logo, animacje;",
       "version-label": "Kontrola wersji",
       "version": "Git/GitHub;",
-      "teamwork-label": "Praca w zepsole oraz zdolność szybkiej nauki."
+      "teamwork-label": "Praca w zespole oraz zdolność szybkiej nauki."
     },
     "modal-description": {
       "experience": {
@@ -92,9 +92,9 @@
         "Jest": "podstawowe testy jednostkowe"
       },
       "design": {
-        "Photoshop": "korekta i manipulacja fotografii; warstwy, maski, dopasowania etc",
+        "Photoshop": "korekta i manipulacja fotografii; warstwy, maski, dopasowania etc.",
         "Illustrator": "budowanie kształtów; projektowanie logo; eksportowanie do formatu SVG",
-        "Premiere Pro": "montaż i synchronizacja wideo; podstawowa korekcja kolorów",
+        "Premiere Pro": "montaż i synchronizacja wideo; podstawowa korekta kolorów",
         "AfterEffects": "animacje klatek kluczowych; animacje typu motion graphics",
         "figmaadobexd": "podstawowe projektowanie i prototypowanie UI/UX"
       }
