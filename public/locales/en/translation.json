@@ -1,7 +1,7 @@
 {
   "navigation": {
     "main page": "home",
-    "resume": "resume",
+    "resume": "résumé",
     "portfolio": "portfolio",
     "about me": "about"
   },
@@ -21,7 +21,7 @@
       "p1": "My coding adventure began when I turned 15.",
       "p2": "Since then, I've been spending most of my free time developing and perfecting my skills in that field.",
       "p3": "Quality of my code isn't indifferent to me - I always try to look for solutions, that will make my code readable and effective.",
-      "button": "SEE MY RESUME"
+      "button": "SEE MY RÉSUMÉ"
     },
     "experience with design": {
       "heading": "Experience in graphic design",
