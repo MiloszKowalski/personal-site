@@ -123,5 +123,9 @@
     "phone": "Phone",
     "content": "Message",
     "send": "Send"
+  },
+  "about": {
+    "question": "Few words about me?",
+    "answer": "Take a hip-hop-ish, street-like style and give it a tie. Mix emotional composure with a big dose of smile. Add love of nature and a little bit of perfectionism. Put it before computer screen and surround it with dozens of plants - at this moment you should see something that looks pretty similar :)"
   }
 }

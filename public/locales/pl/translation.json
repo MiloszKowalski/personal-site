@@ -123,5 +123,9 @@
     "phone": "Nr telefonu",
     "content": "Treść wiadomości",
     "send": "Wyślij"
+  },
+  "about": {
+    "question": "Kilka słów o mnie?",
+    "answer": "Weź hip-hop'owy, uliczny wręcz styl i dołóż mu krawat. Zmieszaj opanowanie emocjonalne z dużą dawką uśmiechu. Dodaj miłość do natury i odrobinę perfekcjonizmu. Umieść to przed monitorem i postaw wokół dziesiątki roślin - w tym momencie powinieneś mieć przed sobą coś, co wygląda znajomo :)"
   }
 }
