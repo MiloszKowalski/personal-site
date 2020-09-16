@@ -103,6 +103,11 @@ const ImageSlider: React.FC<Props> = ({ images }) => {
         throttleEventHandler(1000, navigateToSlideOfIndex(getCurrentSlideIndex()));
     }
 
+    // Fix state persisting between projects
+    if(currentImageUri === images?.[0]) {
+      navigateToSlideOfIndex(0);
+    }
+
     const slider = imageSlider.current;
     if(slider === null) return;
     slider.addEventListener('touchstart', handleOnTouchDown);
