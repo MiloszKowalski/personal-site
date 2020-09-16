@@ -9,6 +9,7 @@ import ImageSlider from 'components/ImageSlider/ImageSlider';
 import { ReactComponent as VerticalWave } from 'components/svg/VerticalWave.svg';
 import { ReactComponent as HorizontalWaveMask } from 'components/svg/HorizontalWaveMask.svg';
 import { breakpoints } from 'utils/mediaBreakpoints';
+import Fade from 'react-reveal/Fade';
 import './PortfolioDetailsView.scss';
 
 type Props = {
@@ -35,14 +36,18 @@ const PortfolioDetailsView: React.FC<Props> = ({ projects }) => {
     <div className="portfolio-details-wrapper">
       <div className="portfolio-project-preview">
         <ImageSlider images={ projectInfo?.picturesUris } />
-        <div className="portfolio-project-title">
-          <h1>{ t(projectInfo?.title || '') }</h1>
-        </div>
+        <Fade>
+          <div className="portfolio-project-title">
+            <h1>{ t(projectInfo?.title || '') }</h1>
+          </div>
+        </Fade>
         <div className="portfolio-technology-label-wrapper">
           { projectInfo?.technologies.map(x => (
-            <div key={ x } className="portfolio-technology-label">
-              { x }
-            </div>
+            <Fade>
+              <div key={ x } className="portfolio-technology-label">
+                { x }
+              </div>
+            </Fade>
           )) }
         </div>
       </div>
@@ -57,9 +62,11 @@ const PortfolioDetailsView: React.FC<Props> = ({ projects }) => {
             )}
         </Media>
       </div>
-      <div className="description-text">
-        <p>{ t(projectInfo?.description || '') }</p>
-      </div>
+      <Fade>
+        <div className="description-text">
+          <p>{ t(projectInfo?.description || '') }</p>
+        </div>
+      </Fade>
       </div>
       <div className="portfolio-back-button">
         <Link to={ oneUrlLevelUp }>
