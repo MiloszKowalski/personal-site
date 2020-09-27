@@ -330,6 +330,7 @@ section.resume-section {
           margin: 20px auto;
           position: absolute;
           bottom: -30%;
+          animation: blink 1s infinite;
           right: -5%;
           border: 2px solid #fff;
           background: linear-gradient(225deg, var(--gradient-start), var(--gradient-end));
@@ -338,6 +339,21 @@ section.resume-section {
         &:last-of-type::after {
           display: none;
         }
+      }
+    }
+
+    @keyframes blink {
+      0% {
+        transform: scale(1);
+        filter: brightness(1);
+      }
+      50% {
+        transform: scale(1.25);
+        filter: brightness(1.25);
+      }
+      100% {
+        transform: scale(1);
+        filter: brightness(1);
       }
     }
 

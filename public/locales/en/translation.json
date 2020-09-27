@@ -19,18 +19,18 @@
     "coding with passion": {
       "heading": "Coding with passion",
       "p1": "My coding adventure began when I turned 15.",
-      "p2": "Since then, I've been spending most of my free time developing and perfecting my skills in that field.",
-      "p3": "Quality of my code isn't indifferent to me - I always try to look for solutions, that will make my code readable and effective.",
+      "p2": "Since then, I've been spending most of my free time developing and refining my skills in that field.",
+      "p3": "The quality of my code is very important for me - I always try to look for solutions, that will make my code readable and effective.",
       "button": "SEE MY RÉSUMÉ"
     },
     "experience with design": {
-      "heading": "Experience in graphic design",
-      "p1": "Before I started programming, I was focused on graphic design.",
-      "p2": "The skills and experience I've aquired back then, help me with animations and user interfaces up to this day.",
+      "heading": "Experienced in graphic design",
+      "p1": "Before I started programming, I used to be focused on graphic design.",
+      "p2": "The skills and experience I've aquired back then help me with creating animations and user interfaces up to this day.",
       "button": "SEE MY WORK"
     },
     "footer": {
-      "p1": "Made with ❤ by me.",
+      "p1": "Made with ❤ by myself.",
       "p2": "Copyright Miłosz Kowalski ",
       "p3": ". All rights reserved."
     }
@@ -66,7 +66,7 @@
       "english-label": "English",
       "english": "fluent, allowing communication and reading (or creating) technical documentation;",
       "abstract-label": "Abstract thinking",
-      "abstract": "problem solving, splitting them into smaller ones;",
+      "abstract": "problem solving, chunking them into smaller ones;",
       "uiux-label": "UI/UX and design fundamentals",
       "uiux": "user interfaces, logo, animations;",
       "version-label": "Version Control",
@@ -125,7 +125,7 @@
     "send": "Send"
   },
   "about": {
-    "question": "Few words about me?",
-    "answer": "Take a hip-hop-ish, street-like style and give it a tie. Mix emotional composure with a big dose of smile. Add love of nature and a little bit of perfectionism. Put it before computer screen and surround it with dozens of plants - at this moment you should see something that looks pretty similar :)"
+    "question": "A few words about me?",
+    "answer": "Take hip-hop-ish, street-like style and give it a tie. Mix internal calm with a big dose of smile. Add love for the nature and a little bit of perfectionism. Put it in front of a computer screen and surround it with dozens of plants - at this moment you should see something that looks pretty similar :)"
   }
 }

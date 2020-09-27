@@ -148,7 +148,7 @@
   display: flex;
   width: 100%;
   overflow: auto;
-  padding: 10px;
+  padding: 15px;
 
   &::after {
     content: ' ';
@@ -161,6 +161,7 @@
 
   @media (min-width: 1024px) {
     width: 100%;
+    padding: 5px;
     flex-wrap: wrap;
   }
 }
