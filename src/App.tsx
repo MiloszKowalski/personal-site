@@ -1,16 +1,21 @@
 import React from 'react';
-import TopMenu from 'components/TopMenu/TopMenu';
-import TopMenuContextProvider from 'contexts/TopMenuContext';
-import Modal from 'components/Modal/Modal';
-import ImageModal from 'components/ImageModal/ImageModal';
-import ModalContextProvider from 'contexts/ModalContext';
-import ImageModalContextProvider from 'contexts/ImageModalContext';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from 'views/Home/Home';
-import Resume from 'views/Resume/Resume';
-import Portfolio from 'views/Portfolio/Portfolio';
-import About from 'views/About/About';
-import ScrollToTop from 'components/ScrollToTop';
+
+import ImageModal from 'components/ImageModal';
+import ImageModalContextProvider from 'contexts/ImageModalContext';
+
+import Modal from 'components/Modal/Modal';
+import ModalContextProvider from 'contexts/ModalContext';
+
+import TopMenu from 'components/TopMenu';
+import TopMenuContextProvider from 'contexts/TopMenuContext';
+
+import About from 'views/About';
+import Home from 'views/Home';
+import Portfolio from 'views/Portfolio';
+import Resume from 'views/Resume';
+
+import ScrollToTop from 'components/ScrollToTop/ScrollToTop';
 import 'styles/animate-svg.scss';
 
 function App() {

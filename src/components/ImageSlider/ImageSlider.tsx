@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useContext, useRef, useCallback } from 'react';
-import { ReactComponent as ArrowIcon } from 'components/svg/icons/ArrowIcon.svg';
+
 import { ImageModalContext } from 'contexts/ImageModalContext';
+
+import { ReactComponent as ArrowIcon } from 'components/svg/icons/ArrowIcon.svg';
+
 import throttleEventHandler from 'utils/throttleEventHandler';
 import './ImageSlider.scss';
 

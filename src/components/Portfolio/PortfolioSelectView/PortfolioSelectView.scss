@@ -25,20 +25,19 @@
   justify-items: stretch;
   text-align: center;
   border-radius: 15px;
-  transition: transform 0.25s;
 
   h5 {
     font-size: 0.9rem;
     color: var(--gradient-end);
   }
+}
 
+.portfolio-menu-card-icon-wrapper {
+  transition: transform 0.25s;
   &:hover {
     cursor: pointer;
     transform: translateY(-10px) scale(1.05);
   }
-}
-
-.portfolio-menu-card-icon-wrapper {
   svg {
     width: 60%;
     margin: 0 auto;

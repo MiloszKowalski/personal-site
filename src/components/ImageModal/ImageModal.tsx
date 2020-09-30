@@ -1,7 +1,10 @@
 import React, { useContext } from 'react';
+
 import { ImageModalContext } from 'contexts/ImageModalContext';
-import { ReactComponent as CloseIcon } from 'components/svg/icons/CloseIcon.svg';
+
 import { ReactComponent as ArrowIcon } from 'components/svg/icons/ArrowIcon.svg';
+import { ReactComponent as CloseIcon } from 'components/svg/icons/CloseIcon.svg';
+
 import './../Modal/Modal.scss';
 import './ImageModal.scss';
 

@@ -15,7 +15,7 @@
     width: 100%;
     background: linear-gradient(270deg, var(--gradient-start), var(--gradient-end));
     position: relative;
-    bottom: -2px;
+    bottom: 0px;
     clip-path: url(#side-menu-horizontal-wave-mask);
     grid-area: wave;
 
@@ -37,14 +37,22 @@
     padding: 10px 20px;
     margin: 15px 0;
     background-color: rgba(0,0,0,0.25);
-    transition: background-color 0.25s, color 0.25s, transform 0.25s;
-    transform: scale(0.85);
+    transition: background-color 0.25s, color 0.25s;
+
+
+    & li {
+      transition: transform 0.25s;
+      transform: scale(0.85);
+    }
 
     &.active {
       background-color: #fff;
       color: var(--gradient-start);
-      transform: scale(1);
       cursor: default;
+
+      & li {
+        transform: scale(1);
+      }
     }
   }
 

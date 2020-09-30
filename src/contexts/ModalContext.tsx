@@ -1,6 +1,8 @@
 import React, { Component, createContext } from 'react';
-import { Modal, experienceInfo, techStackInfo } from './ResumeModalInfo';
+
 import { ReactComponent as FrontendIcon } from 'views/Resume/svg/FrontendIcon.svg';
+
+import { Modal, experienceInfo, techStackInfo } from './ResumeModalInfo';
 
 type modalContext = {
   isVisible: boolean,

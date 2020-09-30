@@ -204,14 +204,14 @@ section.coding-with-passion {
 
   .coding-text-wrapper {
     margin-bottom: 20px;
+    min-width: 30%;
     @media (min-width: 1024px) {
       margin-right: 50px;
     }
   }
 
   .coding-img-wrapper {
-    width: 1000px;
-    max-width: 100%;
+    width: 90vw;
     min-height: 25vh;
     display: flex;
     align-items: stretch;
@@ -229,6 +229,7 @@ section.coding-with-passion {
     @media (min-width: 1024px) {
       min-height: 60vh;
       margin: 40px;
+      width: 45vw;
     }
 
     .coding-img {

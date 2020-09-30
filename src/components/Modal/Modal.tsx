@@ -1,8 +1,11 @@
 import React, { useEffect, useRef, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
+
 import { ModalContext } from 'contexts/ModalContext';
+
 import { ReactComponent as CloseIcon } from 'components/svg/icons/CloseIcon.svg';
 import { ReactComponent as ModalWaveMask } from 'components/svg/ModalWaveMask.svg';
+
 import './Modal.scss';
 
 const Modal: React.FC = () => {

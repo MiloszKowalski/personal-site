@@ -1,6 +1,8 @@
 import React from 'react';
-import './LoadingScreen.scss';
+
 import { ReactComponent as HorizontalWave } from 'components/svg/HorizontalWaveMask.svg';
+
+import './LoadingScreen.scss';
 
 const LoadingScreen: React.FC = () => {
   return (

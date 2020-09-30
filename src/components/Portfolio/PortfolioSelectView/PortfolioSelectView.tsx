@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
+
 import { ReactComponent as BackendIcon } from 'components/svg/icons/BackendIcon.svg';
-import { ReactComponent as FrontendIcon } from 'components/svg/icons/FrontendIcon.svg';
 import { ReactComponent as DesignIcon } from 'components/svg/icons/DesignIcon.svg';
-import Fade from 'react-reveal/Fade';
+import { ReactComponent as FrontendIcon } from 'components/svg/icons/FrontendIcon.svg';
+
+import Reveal from 'components/Reveal';
 import './PortfolioSelectView.scss';
 
 const PortfolioSelectView: React.FC = () => {
@@ -11,7 +13,7 @@ const PortfolioSelectView: React.FC = () => {
 
   return (
     <div className="portfolio-select-wrapper">
-      <Fade>
+      <Reveal direction="top" cascade>
         <Link to={`${url}/backend`}>
           <div className="portfolio-menu-card">
             <div className="portfolio-menu-card-icon-wrapper">
@@ -36,7 +38,7 @@ const PortfolioSelectView: React.FC = () => {
             <h5>DESIGN</h5>
           </div>
         </Link>
-      </Fade>
+      </Reveal>
     </div>
   )
 }

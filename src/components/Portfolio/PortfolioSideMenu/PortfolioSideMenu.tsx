@@ -1,19 +1,23 @@
-import React, { Fragment } from 'react';
-import { NavLink, useRouteMatch } from 'react-router-dom';
-import { ReactComponent as BackendIcon } from 'components/svg/icons/BackendIcon.svg';
-import { ReactComponent as FrontendIcon } from 'components/svg/icons/FrontendIcon.svg';
-import { ReactComponent as DesignIcon } from 'components/svg/icons/DesignIcon.svg';
-import { ReactComponent as VerticalWave } from 'components/svg/VerticalWave.svg';
-import { ReactComponent as HorizontalWaveMask } from 'components/svg/HorizontalWaveMask.svg';
-import { breakpoints } from 'utils/mediaBreakpoints';
+import React from 'react';
 import Media from 'react-media';
+import { NavLink, useRouteMatch } from 'react-router-dom';
+
+import { ReactComponent as BackendIcon } from 'components/svg/icons/BackendIcon.svg';
+import { ReactComponent as DesignIcon } from 'components/svg/icons/DesignIcon.svg';
+import { ReactComponent as FrontendIcon } from 'components/svg/icons/FrontendIcon.svg';
+import { ReactComponent as HorizontalWaveMask } from 'components/svg/HorizontalWaveMask.svg';
+import { ReactComponent as VerticalWave } from 'components/svg/VerticalWave.svg';
+
+import { breakpoints } from 'utils/mediaBreakpoints';
+import Reveal from 'components/Reveal';
 import './PortfolioSideMenu.scss';
 
 const PortfolioSideMenu: React.FC = () => {
   const { url } = useRouteMatch();
 
   return (
-    <div className="side-menu-wrapper">
+    <div className="side-menu-wrapper slide-in-bottom">
+      <Reveal direction="bottom" cascade>
       <ul>
         <NavLink to={`${url}/backend`}>
         <li>
@@ -40,16 +44,17 @@ const PortfolioSideMenu: React.FC = () => {
         </li>
         </NavLink>
       </ul>
-      <div className="side-menu-wave">
-        <Media queries={breakpoints}>
-            { matches => (
-              <Fragment>
-                { matches.phone && <HorizontalWaveMask id="horizontal-wave-mask" /> }
-                { matches.tabletAndAbove && <VerticalWave id="vertical-wave" /> }
-              </Fragment>
-            )}
-        </Media>
-      </div>
+      </Reveal>
+      <div className="side-menu-wave slide-in-bottom-mobile-only">
+      <Media queries={breakpoints}>
+          { matches => (
+            <>
+              { matches.phone && <HorizontalWaveMask id="horizontal-wave-mask" /> }
+              { matches.tabletAndAbove && <VerticalWave id="vertical-wave" /> }
+            </>
+          )}
+      </Media>
+    </div>
     </div>
   )
 }

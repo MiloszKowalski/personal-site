@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import Fade from 'react-reveal/Fade';
+
+import Reveal from 'components/Reveal';
 import './About.scss';
 
 const About: React.FC = () => {
@@ -8,7 +9,7 @@ const About: React.FC = () => {
 
   return (
     <div className="view-wrapper about">
-      <Fade>
+      <Reveal direction="top">
         <div className="about-image-wrapper">
           <div className="about-image"></div>
         </div>
@@ -16,7 +17,7 @@ const About: React.FC = () => {
           <p>{ t('about.question') }</p>
           <p>{ t('about.answer') }</p>
         </div>
-      </Fade>
+      </Reveal>
     </div>
   )
 }

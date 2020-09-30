@@ -1,7 +1,8 @@
-import { ReactComponent as FollowUPLogoDark } from 'views/Resume/svg/FollowUPLogoDark.svg';
-import { ReactComponent as FrontendIcon } from 'views/Resume/svg/FrontendIcon.svg';
 import { ReactComponent as BackendIcon } from 'views/Resume/svg/BackendIcon.svg';
 import { ReactComponent as DesignIcon } from 'views/Resume/svg/DesignIcon.svg';
+import { ReactComponent as FollowUPLogoDark } from 'views/Resume/svg/FollowUPLogoDark.svg';
+import { ReactComponent as FrontendIcon } from 'views/Resume/svg/FrontendIcon.svg';
+
 import AdobeXdIcon from 'views/Resume/svg/AdobeXdIcon.svg';
 import AfterEffectsIcon from 'views/Resume/svg/AfterEffectsIcon.svg';
 import ASPNetIcon from 'views/Resume/svg/ASPNetIcon.svg';

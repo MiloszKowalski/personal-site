@@ -1,15 +1,18 @@
 import React, { Fragment } from 'react';
-import { Link, useParams, useRouteMatch } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Media from 'react-media';
-import { Project } from 'views/Portfolio/Portfolio';
+import { Link, useParams, useRouteMatch } from 'react-router-dom';
+
 import { ReactComponent as BackArrowIcon } from 'components/svg/icons/BackArrowIcon.svg';
 import { ReactComponent as GithubIcon } from 'components/svg/icons/Github.svg';
-import ImageSlider from 'components/ImageSlider/ImageSlider';
-import { ReactComponent as VerticalWave } from 'components/svg/VerticalWave.svg';
 import { ReactComponent as HorizontalWaveMask } from 'components/svg/HorizontalWaveMask.svg';
+import { ReactComponent as VerticalWave } from 'components/svg/VerticalWave.svg';
+
+import { Project } from 'views/Portfolio/Portfolio';
+
+import Reveal from 'components/Reveal';
+import ImageSlider from 'components/ImageSlider';
 import { breakpoints } from 'utils/mediaBreakpoints';
-import Fade from 'react-reveal/Fade';
 import './PortfolioDetailsView.scss';
 
 type Props = {
@@ -34,23 +37,23 @@ const PortfolioDetailsView: React.FC<Props> = ({ projects }) => {
 
   return (
     <div className="portfolio-details-wrapper">
+      <Reveal direction="top">
       <div className="portfolio-project-preview">
         <ImageSlider images={ projectInfo?.picturesUris } />
-        <Fade>
-          <div className="portfolio-project-title">
-            <h1>{ t(projectInfo?.title || '') }</h1>
-          </div>
-        </Fade>
+        <div className="portfolio-project-title">
+          <h1>{ t(projectInfo?.title || '') }</h1>
+        </div>
+        <Reveal direction="right" cascade>
         <div className="portfolio-technology-label-wrapper">
           { projectInfo?.technologies.map(x => (
-            <Fade>
               <div key={ x } className="portfolio-technology-label">
                 { x }
               </div>
-            </Fade>
           )) }
         </div>
+        </Reveal>
       </div>
+      </Reveal>
       <div className="portfolio-project-description">
       <div id="portfolio-details-wave">
         <Media queries={breakpoints}>
@@ -62,11 +65,11 @@ const PortfolioDetailsView: React.FC<Props> = ({ projects }) => {
             )}
         </Media>
       </div>
-      <Fade>
+      <Reveal direction="origin">
         <div className="description-text">
           <p>{ t(projectInfo?.description || '') }</p>
         </div>
-      </Fade>
+      </Reveal>
       </div>
       <div className="portfolio-back-button">
         <Link to={ oneUrlLevelUp }>

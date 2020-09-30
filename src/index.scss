@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-@import 'styles/color-palette';
 @import 'styles/breakpoints';
+@import 'styles/color-palette';
+@import 'styles/reveal-animations';
 
 * {
   box-sizing: border-box;
@@ -11,4 +12,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
 }

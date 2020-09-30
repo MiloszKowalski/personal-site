@@ -1,9 +1,11 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
+
 import LoadingScreen from 'components/LoadingScreen/LoadingScreen';
-import './index.scss';
 import App from './App';
+
 import './i18n';
+import './index.scss';
 
 ReactDOM.render(
   <React.StrictMode>

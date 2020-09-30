@@ -1,7 +1,9 @@
 import React, { useContext, useLayoutEffect, useState } from 'react';
 import { useScrollPosition } from 'utils/useScrollPosition';
-import { TopMenuContext } from 'contexts/TopMenuContext';
 import { Link, withRouter, RouteComponentProps } from 'react-router-dom';
+
+import { TopMenuContext } from 'contexts/TopMenuContext';
+
 import Navigation from './Navigation';
 import './TopMenu.scss';
 

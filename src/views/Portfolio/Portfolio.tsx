@@ -1,12 +1,14 @@
 import React from 'react';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
-import PortfolioSelectView from 'components/Portfolio/PortfolioSelectView/PortfolioSelectView';
+
 import PortfolioDetailsView from 'components/Portfolio/PortfolioDetailsView/PortfolioDetailsView';
+import PortfolioMainView from 'components/Portfolio/PortfolioMainView/PortfolioMainView';
+import PortfolioSelectView from 'components/Portfolio/PortfolioSelectView/PortfolioSelectView';
 import PortfolioSideMenu from 'components/Portfolio/PortfolioSideMenu/PortfolioSideMenu';
-import PortfolioMainView from 'components/Portfolio/PortfolioMainView';
+
 import backendProjects from './Data/backendPortfolioData';
-import frontendProjects from './Data/frontendPortfolioData';
 import designProjects from './Data/designPortfolioData';
+import frontendProjects from './Data/frontendPortfolioData';
 import './Portfolio.scss';
 
 export type Project = {

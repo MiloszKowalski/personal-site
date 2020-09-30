@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link, NavLink } from 'react-router-dom';
+
 import { ReactComponent as GBFlag } from 'components/svg/flags/GBFlag.svg';
 import { ReactComponent as PLFlag } from 'components/svg/flags/PLFlag.svg';
+
 import { TopMenuContext } from 'contexts/TopMenuContext';
-import { Link, NavLink } from 'react-router-dom';
+
 import { Language } from 'enums/Language';
 import MenuIcon from './MenuIcon';
 
