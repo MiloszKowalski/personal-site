@@ -7,6 +7,10 @@
       grid-template-columns: 1fr 8fr;
     }
   }
+
+  @media (min-width: 768px) {
+    overflow: hidden;
+  }
 }
 
 .portfolio-items-view-wrapper {

@@ -76,13 +76,13 @@ const PortfolioDetailsView: React.FC<Props> = ({ projects }) => {
           <BackArrowIcon />{category}
         </Link>
       </div>
-      { projectInfo?.githubLink ?
+      { projectInfo?.githubLink &&
         <div className="portfolio-github-link">
           <a href={ projectInfo.githubLink } target='_blank' rel='noopener noreferrer'>
             <GithubIcon />
           </a>
         </div>
-      : ''}
+      }
     </div>
   )
 }
