@@ -103,17 +103,28 @@
   "portfolio": {
     "backend": {
       "followup-backend": {
-        "title": "FollowUP - automatyzacja mediów społecznościowych"
+        "title": "FollowUP - automatyzacja mediów społecznościowych",
+        "description": "FollowUP powstał jako startup tworzony przez grupę trzech osób. Do organizacji pracy wykorzystaliśmy Trello. Ja w projekcie początkowo zajmowałem się jedynie frontenedem, jednakże problemy w komunikacji z backendowcem sprawiły, że przejąłem również jego obowiązki. To pozwoliło mi znacząco poszerzyć swoje umiejętności. Projekt był dość wymagający, ponieważ oprócz standardowych interakcji z użytkownikiem, zapewniał automatyzację profili społecznościowych na platformie Instagram. Wymagało to odpowiedniej architektury z użyciem wielowątkowości. W projekcie starałem się utrzymać codebase przejrzystym, dlatego zastosowałem wzorce takie, jak CQS, czy Dependency Injection. Wykorzystałem do tego bibliotekę Autofac oraz AutoMapper. Dodatkowo użyłem middleware do obsługi wyjątków, co sprawiło, że obsługa błędów w requestach stała się prosta i wygodna. Do uwierzytelniania i autoryzacji wykorzystałem tokeny JWT razem z ich odświeżaniem. Ponadto, jako że korzystaliśmy z wewnętrzengo API Instagrama, miałem okazję za pomocą narzędzi takich jak Postman oraz mitmproxy uważnie obserwować ruch aplikacji, wyciągając odpowiednie wnioski. Walka z zabezpieczeniami antyspamowymi Instagrama zajęła bardzo dużo czasu, co z kolei nie pozwoliło dokończyć projektu na czas, aczkolwiek nie został on przez nas porzucony - jedynie przełożony na czas \"po godzinach\"."
       }
     },
     "frontend": {
       "followup-dashboard": {
-        "title": "FollowUP - panel zarządzania"
+        "title": "FollowUP - panel zarządzania",
+        "description": "Panel zarządzania usługami agencji FollowUP, dedykowany naszemu WebAPI. Co ciekawe, gdy zaczynałem go tworzyć, nie znałem frameworka Vue.js. Uznałem, że projekt będzie idealny do jego nauki, jako że miał zawierać kilka widoków i integrację z API. Cały projekt razem z UI/UX jest mojego autorstwa. Z racji utrudnień w backendowej części projektu, na dzień dzisiejszy panel nie posiada całej planowanej funkcjonalności (brakuje m.in. opcji planowania promocji oraz jej uruchamiania). Dostępne jest jednak zarządzanie nimi, dodawanie instagramowego konta oraz zmiana jego ustawień. Największy priorytet w projekcie panelu miała przejrzystość interfejsu oraz wygoda użytkowania. Dużo uwagi poświęciłem również na animacje interfejsu, umilające korzystanie z aplikacji. Projekt nauczył mnie pracy z aplikacjami SPA opartymi na komponentach, scentralizowanym stanem aplikacji, biblioteką Axios, a wszystko nadzorował ESLint z konfiguracją Airbnb. Ponadto miałem okazję rozwinąć zdolność samodzielnej i szybkiej nauki nieznanej mi technologii."
+      },
+      "followup-landing": {
+        "title": "FollowUP - strona startowa",
+        "description": "Każdy internetowy biznes potrzebuje swojej strony startowej - nie inaczej było w przypadku FollowUP. Zdecydowałem się na prosty, przejrzysty layout podzielony na sekcje, składające się z nagłówka, illustracji izometrycznej oraz krótkiego opisu. By lepiej zorganizować kod, wykorzystałem prosty framework DnaWeb, który pozwolił mi podzielić kod HTML strony. Ponadto ułatwił on proces dodawania animacji odsłaniania przy przewijaniu strony. Dodatkowym atutem projektu są animacje związane z wspomnianymi ilustracjami. W widoku z polubieniami i obserwacjami popchnąłem możliwości SVG do granic i wdrożyłem animację opartą na clipPath, co pozwoliło zanimować nie tylko wykres na tablicy, ale również interaktywne przyciski. Co więcej, na stronie umieściłem formularz kontaktowy, współpracujący z Netlify Forms."
+      },
+      "mkowalski-dev": {
+        "title": "Ta strona",
+        "description": "Tak, tak, wiem... Nie powinienem zawierać projektu portfolio na stronie portfolio, jednakże postanowiłem to zrobić z uwagi na użyte technologie. Mianowicie to mój pierwszy projekt z użyciem React.js oraz TypeScript. Z perspektywy czasu, React może nie był najlepszym wyborem do tak prostej strony, jednak ta pomyłka pozwoliła mi głęboko zrozumieć jego działanie i w połączeniu z TypeScriptem dała porządny fundament do tworzenia prawdziwych aplikacji z jego wykorzystaniem. Największy problem przysporzył dynamicznie renderowany DOM, który uniemożliwił łatwe odsłanianie (animację) elementów przy przewijaniu, ponieważ niedostępny dla mnie był querySelector. Co więcej nie mogłem znaleźć gotowej bilbioteki do animacji, odpowiadającej moim potrzebom - każda sprawiała więcej problemów niż pożytku. To skłoniło mnie do napisania własnego, uniwersalnego komponentu do tego typu animacji, który dodatkowo nie tworzył żadnych elementów opakowujących, co pozwoliło zachować pierwotny layout np. z użyciem CSS grid. Również react-router okazał się nie być najlepszym rozwiązaniem na wymaganą przeze mnie nawigację. Gdybym miał jeszcze raz wybierać technologię, prawdopodobnie zdecydowałbym się na coś w stylu Gatsby.js lub przynajmniej Next.js - o których wtedy jeszcze nie miałem pojęcia."
       }
     },
     "design": {
       "followup-design": {
-        "title": "FollowUP - identyfikacja graficzna"
+        "title": "FollowUP - identyfikacja graficzna",
+        "description": "Identyfikacja graficzna FollowUP obejmowała logo, logotyp oraz wizytówki. Motywem przewodnim było ciemne grafitowe tło, dające poczucie profesjonalizmu oraz niebieskie akcenty oddające świeżość rozwiązania. Dodatkowo strzałka w znaku graficznym jest ściśle związana z zastosowaniem automatyzacji, która miała na celu promowanie profili w mediach społecznościowych, natomiast symbol serca stanowiący część litery \"P\" nawiązuje do ikony Instagramowych like'ów (ponieważ była to platforma docelowa przedsięwzięcia). Wprowadzenie motywu fal ma sprawić, by całość była lżejsza w odbiorze, przywołując na myśl znajome, łagodne kształty, co dodatkowo upłynnia całość. Zarówno logo, jak i logotyp zostały wykonane w dwóch wersjach kolorystycznych, a także w wersji monochromatycznej, co w zestawieniu z prostotą projektu umożliwia stosowanie znaków w druku. Tym razem pominąłem księgę znaku, jako że owe prace miałem wykorzystywać sam do celów niewykraczających poza ramy biznesowe firmy."
       }
     }
   },
