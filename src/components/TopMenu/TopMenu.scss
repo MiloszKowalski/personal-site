@@ -1,0 +1,311 @@
+nav.TopMenu {
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  transition: transform 0.5s;
+
+  &::after {
+    content: '';
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 3px 5px 0px rgba(0,0,0,0.1);
+    z-index: -1;
+    background-color: var(--main-light);
+  }
+
+  &.hidden {
+    transform: translateY(-100px);
+  }
+
+  &.loaded::after {
+    transition: opacity 0.2s;
+    display: block;
+  }
+
+  .topmenu-logo h1 {
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin: 10px 20px;
+  }
+
+  .topmenu-logo h1, li {
+    transition: font-size 0.25s, color 0.25s, -webkit-text-fill 0.25s;
+  }
+
+  ul {
+    margin: 10px 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.5s ease-in-out;
+
+    @media (max-width: 1024px) {
+      position: fixed;
+      margin: 0;
+      margin-top: 50px;
+      padding: 0;
+      top: 0;
+      bottom: 0;
+      right: -80vw;
+      z-index: -1;
+      background: var(--standard-gradient);
+      min-width: 80vw;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  li {
+    margin: 0 10px;
+    font-weight: bold;
+    transition: background-position 0.25s, color 0.25s, font-size 0.25s;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    svg {
+      cursor: pointer;
+    }
+
+    a {
+      text-decoration: none;
+      position: relative;
+
+      &.active {
+        cursor: default;
+      }
+
+      &:not(.active)::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        bottom: -10px;
+        position: absolute;
+        opacity: 0;
+        transform: translateX(50%) scaleX(0.5);
+        transition: opacity 0.25s, transform 0.25s;
+      }
+
+      &:hover::after {
+        opacity: 1;
+        transform: translateX(0) scaleX(1);
+      }
+    }
+
+    a.active::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 3px;
+      bottom: -10px;
+      position: absolute;
+      opacity: 1;
+      transition: opacity 0.25s, transform 0.25s;
+    }
+
+    &:last-of-type::after {
+      display: none;
+    }
+
+    @media (max-width: 1024px) {
+      background: var(--main-light);
+      -webkit-background-clip: text;
+      background-clip: text;
+      display: block;
+      margin: 30px auto;
+      font-size: 1.6em;
+
+      &::after {
+        background-color: var(--main-light);
+      }
+    }
+  }
+
+  .menu-icon {
+    display: none;
+    padding-top: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+
+    .line {
+      height: 3px;
+      width: 25px;
+      margin: 5px 0;
+      background: linear-gradient(100deg, var(--gradient-start), var(--gradient-end));
+    }
+
+    > div {
+
+      & div {
+        transition: transform 0.5s, opacity 0.5s;
+      }
+
+      &.open div {
+        &:first-child {
+          transform: translateY(8px) rotate(-45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:last-child {
+          transform: translateY(-8px) rotate(45deg);
+        }
+      }
+    }
+
+    @media (max-width: 1024px) {
+      display: block;
+    }
+  }
+
+  &.normal::after {
+    display: block;
+    opacity: 1;
+  }
+
+  &.normal {
+    .topmenu-logo h1, li a {
+      background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    li a {
+      @media (max-width: 1024px) {
+        color: var(--main-light);
+        -webkit-text-fill-color: var(--main-light);
+      }
+    }
+
+    li {
+      background-size: 300% 300%;
+      background-position: top;
+
+      @media (max-width: 1024px) {
+        color: var(--main-light);
+        -webkit-text-fill-color: var(--main-light);
+      }
+
+      a::after, a.active::after {
+        background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+        background-size: 300% 300%;
+        @media (max-width: 1024px) {
+          background: #fff;
+        }
+      }
+
+      &:hover {
+        background-position: bottom;
+
+        &::after {
+          opacity: 1;
+          transform: translateX(0) scaleX(1);
+        }
+      }
+    }
+  }
+
+  &.docked::after {
+    opacity: 0;
+  }
+
+  &.docked {
+    h1 {
+      font-size: 2em;
+      background: none;
+      -webkit-text-fill-color: var(--main-light);
+    }
+
+    .topmenu-logo h1, li a {
+      background: var(--main-light);
+
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    li a::after, li a.active::after {
+      background-color: var(--main-light);
+    }
+
+    @media (min-width: 1024px) {
+      li {
+        font-size: 1.1em;
+        color: transparent;
+        -webkit-text-fill-color: var(--main-light);
+        background: none;
+      }
+    }
+    .menu-icon .line {
+      background: var(--main-light);
+    }
+  }
+
+  &.expanded, &.expanded.normal {
+    @media (max-width: 1024px) {
+      ul {
+        transform: translateX(-100%);
+      }
+
+      .nav-shadow {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      li a {
+        color: var(--main-light);
+        -webkit-text-fill-color: var(--main-light);
+      }
+
+      a::after, a.active::after {
+        background: #fff;
+      }
+    }
+  }
+}
+
+.nav-shadow {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s, visibility 0.25s;
+  @media (max-width: 1024px) {
+    width:100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+}
+.flag {
+  svg {
+    width: 30px;
+    margin: 0 5px;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    transition: transform 0.25s;
+
+    @media (max-width: 1024px) {
+      width: 60px;
+    }
+  }
+}
+

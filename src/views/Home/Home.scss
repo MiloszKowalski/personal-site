@@ -1,0 +1,440 @@
+* {
+  box-sizing: border-box;
+}
+
+.hero {
+  background: var(--standard-gradient);
+  height: 100vh;
+  position: relative;
+  padding: 30px;
+  overflow: hidden;
+
+  @media (min-width: 1024px) {
+    padding: 50px;
+  }
+
+  .socialmedia-container {
+    display: flex;
+    justify-content: center;
+    @media (min-width: 768px) {
+      justify-content: start;
+      position: absolute;
+      bottom: 50px;
+    }
+    svg {
+      fill: #fff;
+      width: 36px;
+      height: 36px;
+      margin: 12px;
+      cursor: pointer;
+      transition: opacity 0.25s;
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.hero img#hero-image {
+  height: 30vh;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+
+  @media (min-width: 340px) {
+    height: 45vh;
+  }
+
+  @media (min-width: 768px) {
+    height: 65vh;
+    left: 50%;
+  }
+
+  @media (min-width: 1100px) {
+    height: 90vh;
+    left: 40%;
+  }
+}
+
+.hero svg#hero-desktop-svg {
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  width: 100%;
+  pointer-events: none;
+
+  @media (min-width: 480px) {
+    height: 100%;
+  }
+}
+
+.hero svg#hero-mobile-svg {
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 100%;
+  pointer-events: none;
+
+  @media (min-width: 480px) {
+    height: 100%;
+  }
+}
+
+.design-experience svg#design-mobile-svg {
+  position: absolute;
+  top: -1px;
+  width: 100%;
+  height: 10%;
+  pointer-events: none;
+
+  @media (min-width: 768px) {
+    height: 30%;
+  }
+}
+
+.action-wrapper {
+  margin-top: 10vh;
+  text-align: center;
+
+  @media (min-width: 1024px), (orientation: landscape) {
+    text-align: left;
+  }
+}
+
+.hero h1, h2 {
+  color: #fff;
+  margin: 0;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  @media (min-width: 480px) {
+    font-size: 3rem;
+  }
+}
+
+.hero h2 {
+  margin: 0 auto;
+  font-size: 1.2rem;
+  @media (min-width: 1024px), (orientation: landscape) {
+    height: auto;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.6rem;
+  }
+  font-weight: normal;
+  height: 4ch;
+}
+
+a {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 1000px;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--gradient-end);
+  background-color: #fff;
+  border: 1px solid transparent;
+  transition: transform 0.25s;
+  padding: 10px 25px;
+  margin: 10px 5px;
+  font-size: 0.8em;
+
+  @media (min-width: 1024px), (orientation: landscape) {
+    padding: 10px 30px;
+    margin: 20px 0;
+    margin-right: 15px;
+    font-size: 14px;
+  }
+
+  &.alt {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  &.purple {
+    background: linear-gradient(-45deg, var(--gradient-start), var(--gradient-end));
+    background-size: 200%;
+    transition: background-position-x 0.25s, transform 0.25s;
+    color: #fff;
+    border: 1px solid #fff;
+
+    &:hover {
+      background-position-x: right;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+section.coding-with-passion {
+  height: 100vh;
+  padding: 0 8vw;
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row-reverse;
+    padding: 0;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .coding-text-wrapper {
+    margin-bottom: 20px;
+    min-width: 30%;
+    @media (min-width: 1024px) {
+      margin-right: 50px;
+    }
+  }
+
+  .coding-img-wrapper {
+    width: 90vw;
+    min-height: 25vh;
+    display: flex;
+    align-items: stretch;
+    margin: 10px;
+    padding: 3px;
+    background: var(--standard-gradient);
+    margin-top: 20px;
+    color: #fff;
+    text-align: center;
+
+    @media (min-width: 480px) {
+      min-height: 40vh;
+    }
+
+    @media (min-width: 1024px) {
+      min-height: 60vh;
+      margin: 40px;
+      width: 45vw;
+    }
+
+    .coding-img {
+      border: 10px solid #fff;
+      width: 100%;
+      background: url('./img/passion-large.jpg');
+      background: -webkit-image-set( url('./img/passion-small.jpg') 1x, url('./img/passion-large.jpg') 2x );
+      background-size: cover;
+      filter: hue-rotate(335deg);
+      background-position: center;
+    }
+  }
+}
+
+h3 {
+  background: linear-gradient(-45deg, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.4em;
+
+  @media (min-width: 1024px) {
+    font-size: 1.5em;
+  }
+
+  &.alt {
+    background: none;
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+  }
+}
+
+p {
+  text-align: justify;
+
+  @media (min-width: 1024px) {
+    text-align: left;
+  }
+}
+
+section.design-experience {
+  margin-top: 100px;
+  height: 105vh;
+  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+  background-attachment: fixed;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  display: grid;
+  grid-template-areas:
+  "picture"
+  "text"
+  "image"
+  "footer";
+  grid-template-rows: 1fr 5fr 8fr 1fr;
+
+  @media (min-width: 1024px) {
+    flex-direction: row-reverse;
+    text-align: left;
+    padding: 0;
+    margin: 0 auto;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 3fr;
+    grid-template-areas:
+    "picture picture picture picture"
+    "text    text    text    image  "
+    "footer  footer  footer  footer ";
+  }
+
+  .design-text-wrapper {
+    margin: 8vw;
+    grid-area: text;
+    align-self: center;
+    position: relative;
+    top: -55px;
+    @media (min-width: 1024px) {
+      margin: 0 60px;
+    }
+  }
+
+  .design-img-wrapper {
+    grid-area: image;
+    max-width: 100%;
+    color: black;
+    margin: 8vw;
+    @media (min-width: 1024px) {
+      margin: 0 60px;
+      margin-bottom: 50px;
+    }
+
+    .design-img-background {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+      background-attachment: fixed;
+      border: 3px solid #fff;
+    }
+
+    .design-img {
+      width: 100%;
+      height: 100%;
+      background: url('./img/design-experience.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  picture {
+    grid-area: picture;
+  }
+
+  #design-one-svg img {
+    justify-self: start;
+    @media (max-width: 1024px){
+      transform-origin: top;
+      transform: scaleY(0.7) translateY(-5px);
+    }
+  }
+}
+
+section#contact {
+  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  padding-bottom: 50%;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    label {
+      color: #fff;
+      margin: 20px auto 10px 5px;
+    }
+
+    input, textarea {
+      border-radius: 5px;
+      font-family: 'Montserrat', sans-serif;
+      border: none;
+      resize: none;
+      padding: 8px 10px;
+      border-bottom: 3px transparent solid;
+      transition: border 0.25s;
+
+      &:focus {
+        border-bottom: 3px var(--gradient-end) solid;
+        outline: none;
+      }
+    }
+
+    button {
+      margin: 20px auto;
+      background: #fff;
+      color: var(--gradient-end);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 100vw;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: transform 0.25s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  picture#contact-photo img {
+    width: 50%;
+    position: absolute;
+    left: 0;
+  }
+
+  @media (min-width: 1024px) {
+    padding-bottom: 10%;
+    form {
+      width: 30%;
+    }
+    picture#contact-photo img {
+      width: 20%;
+      bottom: 0;
+      left: 10%;
+    }
+  }
+}
+
+#footer-img {
+  grid-area: footer;
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+}
+
+.copyright p {
+  color: #999;
+  font-size: 0.8rem;
+  text-align: center;
+}

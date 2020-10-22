@@ -1,0 +1,10 @@
+<svg id="resume-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 18.96">
+  <defs>
+    <style>
+      .cls-1 {
+        fill:#fff;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M0,0V19H595.28V0C504.59,5.29,403.8,8.23,297.64,8.23S90.69,5.29,0,0Z"/>
+</svg>

@@ -1,0 +1,265 @@
+.portfolio-details-wrapper {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: auto;
+  position: relative;
+  padding-top: 100px;
+
+  @media (min-width: 1024px) {
+    padding-top: 50px;
+    display: grid;
+    grid-template-areas: "projectdescription projectpreview";
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr;
+  }
+}
+
+.portfolio-back-button {
+  position: absolute;
+  top: 58px;
+  left: 0;
+  font-size: 1rem;
+  padding: 10px;
+  font-weight: bold;
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: right;
+  transition: background-position 0.25s;
+
+  & svg {
+    width: 1rem;
+    margin-right: 5px;
+    stroke-width: 2px;
+    stroke: var(--gradient-end);
+    transition: stroke 0.25s;
+
+    @media (min-width: 1024px) {
+      stroke: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &:hover {
+    background-position: left;
+
+    & svg {
+      stroke: var(--gradient-start);
+
+      @media (min-width: 1024px) {
+        stroke: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0.2));
+    padding: 15px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 300% 300%;
+    background-position: right;
+    transition: background-position 0.25s;
+
+    &:hover {
+      background-position: left;
+    }
+  }
+}
+
+.portfolio-link {
+  position: absolute;
+  top: 65px;
+  opacity: 0.75;
+  transition: opacity 0.25s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  & svg {
+    height: 25px;
+    width: 25px;
+
+    path {
+      fill: #000;
+    }
+  }
+
+  &.github {
+    right: 15px;
+  }
+
+  &.website {
+    right: 60px;
+  }
+
+  @media (min-width: 1024px) {
+    top: 50px;
+    margin: 18px;
+
+    &.github {
+      right: 63vw;
+    }
+
+    &.website {
+      right: calc(63vw + 45px);
+    }
+
+    & svg {
+      height: 30px;
+      width: 30px;
+
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.portfolio-project-preview {
+  position: relative;
+  width: 100%;
+
+  h1 {
+    margin: 10px;
+    font-size: 1.25rem;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 1px;
+      position: relative;
+      top: 5px;
+      background: #ccc;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    grid-area: projectpreview;
+    padding: 20px;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.portfolio-project-title {
+  overflow: auto;
+  width: 100%;
+  position: relative;
+}
+
+.portfolio-technology-label-wrapper {
+  display: flex;
+  width: 100%;
+  overflow: auto;
+  padding: 15px;
+
+  &::after {
+    content: ' ';
+    display: block;
+    height: 100%;
+    width: 50px;
+    position: relative;
+    left: 10px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 100%;
+    padding: 5px;
+    flex-wrap: wrap;
+  }
+}
+
+.portfolio-technology-label {
+  margin: 5px;
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  background-attachment: fixed;
+  min-width: max-content;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 1000px;
+  cursor: default;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.portfolio-project-description {
+  color: #fff;
+  position: relative;
+  min-height: calc(70vh - 215px);
+  width: 100%;
+  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+  background-attachment: fixed;
+
+  .description-text {
+    width: 100%;
+    padding: 20px;
+    line-height: 1.8;
+    word-wrap: wrap;
+    overflow: auto;
+  }
+
+  @media (min-width: 1024px) {
+    grid-area: projectdescription;
+    display: flex;
+    flex-direction: row-reverse;
+    grid-template-columns: 1fr 35px;
+    grid-template-areas: "text wave";
+
+    .description-text {
+      margin-top: 70px;
+      margin-right: 20px;
+      padding-top: 0;
+      direction: rtl;
+      overflow-y: auto;
+      p {
+        text-align: justify;
+        direction: ltr;
+      }
+    }
+  }
+}
+
+#portfolio-details-wave {
+  background: white;
+  transform: scaleY(-1) translateY(20px);
+  height: 50px;
+  width: 100%;
+  pointer-events: none;
+  clip-path: url(#side-menu-horizontal-wave-mask);
+
+  svg {
+    height: 40px;
+    width: 50%;
+  }
+
+  @media (min-width: 1024px) {
+    transform: initial;
+    flex-basis: 30px;
+    height: 100%;
+    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+    background-attachment: fixed;
+    overflow: hidden;
+
+    svg {
+      height: 100%;
+      width: 100%;
+
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}

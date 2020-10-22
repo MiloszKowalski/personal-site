@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.54 34.81">
+  <defs>
+    <style>
+      .a, .c {
+        fill: #fff;
+      }
+
+      .b {
+        fill: url(#a);
+      }
+
+      .c {
+        font-size: 3.87px;
+        font-family: Montserrat-Light, Montserrat Light;
+        font-weight: 300;
+        letter-spacing: 0.19em;
+      }
+
+      .d {
+        letter-spacing: 0.2em;
+      }
+
+      .e {
+        letter-spacing: 0.19em;
+      }
+
+      .f {
+        letter-spacing: 0.18em;
+      }
+
+      .g {
+        letter-spacing: 0.2em;
+      }
+    </style>
+    <linearGradient id="a" data-name="Gradient bez nazwy 38" x1="11.42" y1="24.94" x2="16.62" y2="5.01" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3670ce"/>
+      <stop offset="1" stop-color="#20e4bf"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <g>
+      <path class="a" d="M27.49,13.51a5.54,5.54,0,0,0-2.4-2.13,8.33,8.33,0,0,0-3.66-.76H19.54v8.67a8.24,8.24,0,0,1-.82,3.64h2.71a8.48,8.48,0,0,0,3.66-.74,5.5,5.5,0,0,0,2.4-2.14,6.21,6.21,0,0,0,.84-3.26A6.2,6.2,0,0,0,27.49,13.51Zm-5.36,5.64h0a11.77,11.77,0,0,1-.95-1.22c-.78-1.13-.78-1.59-.7-2.08a1.41,1.41,0,0,1,2.66-.34,1.36,1.36,0,0,1,1.14-.2,1.39,1.39,0,0,1,1,1.83c-.08.27-.31.89-1.65,1.44"/>
+      <path class="a" d="M16.66,26a9,9,0,0,1-2.48,1.73h4.17V23.63A8.74,8.74,0,0,1,16.66,26Z"/>
+    </g>
+    <path class="b" d="M19.86,6.34l-1.05-.46V18.22q0,4.63-2.5,7.12a9.52,9.52,0,0,1-7,2.49A11.4,11.4,0,0,1,4.78,27a7.21,7.21,0,0,0,9.13-6.95c0-.16,0-.31,0-.47,0-.47,0-1,0-1.54L14,5.88l-1.1.46L14.7,3.07,16.38,0,18,3Z"/>
+    <path class="a" d="M13.94,20.05a7.24,7.24,0,0,1-9.16,7,8,8,0,0,1-2.49-1.66C.62,23.68.07,21.31.07,18.22h0A38.55,38.55,0,0,1,1,11.34H2.33l2.32,0s-.31,5-.36,6.72c-.1,3.76,1.92,5.65,5,5.65a4.39,4.39,0,0,0,3.48-1.37,5,5,0,0,0,1.13-2.74Z"/>
+    <text class="c" transform="translate(0 33.8)">F<tspan class="d" x="3.18" y="0">OL</tspan><tspan class="e" x="10.23" y="0">L</tspan><tspan class="f" x="13.21" y="0">O</tspan><tspan class="g" x="17.14" y="0">WUP</tspan></text>
+  </g>
+</svg>

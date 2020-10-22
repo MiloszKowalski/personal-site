@@ -1,0 +1,19 @@
+<svg id="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .close-a {
+        fill: url(#close-a);
+      }
+
+      .close-b {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="close-a" x1="10.64" y1="90.31" x2="86.17" y2="12.96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6523b8"/>
+      <stop offset="1" stop-color="#b93ef1"/>
+    </linearGradient>
+  </defs>
+  <circle class="close-a" cx="50" cy="50" r="50"/>
+  <path class="close-b" d="M54,50,69,35a2.83,2.83,0,0,0-4-4L50,46,35,31a2.83,2.83,0,0,0-4,4L46,50,31,65a2.83,2.83,0,0,0,4,4L50,54,65,69a2.83,2.83,0,0,0,4-4Z"/>
+</svg>
