@@ -112,9 +112,11 @@ const Home: React.FC = () => {
           </div>
           </Reveal>
           <Reveal offset={30} direction="right">
-          <div className="design-img-wrapper">
-            PLACEHOLDER
-          </div>
+            <div className="design-img-wrapper">
+              <div className="design-img-background">
+                <div className="design-img"></div>
+              </div>
+            </div>
           </Reveal>
       </section>
       <section id="contact">
