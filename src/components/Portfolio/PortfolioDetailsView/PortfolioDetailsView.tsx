@@ -5,6 +5,7 @@ import { Link, useParams, useRouteMatch } from 'react-router-dom';
 
 import { ReactComponent as BackArrowIcon } from 'components/svg/icons/BackArrowIcon.svg';
 import { ReactComponent as GithubIcon } from 'components/svg/icons/Github.svg';
+import { ReactComponent as Globe } from 'components/svg/icons/Globe.svg';
 import { ReactComponent as HorizontalWaveMask } from 'components/svg/HorizontalWaveMask.svg';
 import { ReactComponent as VerticalWave } from 'components/svg/VerticalWave.svg';
 
@@ -76,8 +77,15 @@ const PortfolioDetailsView: React.FC<Props> = ({ projects }) => {
           <BackArrowIcon />{category}
         </Link>
       </div>
+      { projectInfo?.websiteLink &&
+        <div className="portfolio-link website">
+          <a href={ projectInfo.websiteLink } target='_blank' rel='noopener noreferrer'>
+            <Globe />
+          </a>
+        </div>
+      }
       { projectInfo?.githubLink &&
-        <div className="portfolio-github-link">
+        <div className="portfolio-link github">
           <a href={ projectInfo.githubLink } target='_blank' rel='noopener noreferrer'>
             <GithubIcon />
           </a>

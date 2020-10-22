@@ -69,10 +69,9 @@
   }
 }
 
-.portfolio-github-link {
+.portfolio-link {
   position: absolute;
   top: 65px;
-  right: 15px;
   opacity: 0.75;
   transition: opacity 0.25s;
 
@@ -89,10 +88,25 @@
     }
   }
 
+  &.github {
+    right: 15px;
+  }
+
+  &.website {
+    right: 60px;
+  }
+
   @media (min-width: 1024px) {
     top: 50px;
-    right: 63vw;
     margin: 18px;
+
+    &.github {
+      right: 63vw;
+    }
+
+    &.website {
+      right: calc(63vw + 45px);
+    }
 
     & svg {
       height: 30px;
@@ -192,6 +206,7 @@
   .description-text {
     width: 100%;
     padding: 20px;
+    line-height: 1.8;
     word-wrap: wrap;
     overflow: auto;
   }

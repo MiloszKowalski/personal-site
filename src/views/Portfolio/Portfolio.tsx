@@ -17,7 +17,8 @@ export type Project = {
   description: string,
   technologies: string[],
   picturesUris: string[],
-  githubLink?: string
+  githubLink?: string,
+  websiteLink?: string
 }
 
 function isInMenu() {
