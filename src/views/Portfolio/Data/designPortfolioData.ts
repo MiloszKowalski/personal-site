@@ -4,13 +4,17 @@ const designProjects: Project[] = [
   {
     id: 'followup-design',
     title: 'portfolio.design.followup-design.title',
-    description: '...',
+    description: 'portfolio.design.followup-design.description',
     technologies: [
       'Illustrator',
-      'Logo'
+      'Logo',
+      'Logotype',
+      'Business Cards'
     ],
     picturesUris: [
-      'followupDashboardMockup'
+      'https://i.imgur.com/nZ9SBMp.png',
+      'https://i.imgur.com/uSGqsGG.png',
+      'https://i.imgur.com/vtO7sJN.png'
     ]
   }
 ]

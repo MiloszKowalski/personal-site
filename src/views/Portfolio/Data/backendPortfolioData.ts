@@ -4,7 +4,7 @@ const backendProjects: Project[] = [
   {
     id: 'followup-automation',
     title: 'portfolio.backend.followup-backend.title',
-    description: '...',
+    description: 'portfolio.backend.followup-backend.description',
     technologies: [
       'C#',
       'ASP.NET Core',

@@ -103,17 +103,28 @@
   "portfolio": {
     "backend": {
       "followup-backend": {
-        "title": "FollowUP - social media automation"
+        "title": "FollowUP - social media automation",
+        "description": "FollowUP started as a three-people startup. We used Trello as our work organizing tool. In the beginning, I used to be only concerned about frontend. However, communication problems with the backend guy made me take on also his tasks. It has let me substantially develop my skills. The project was pretty demanding - besides standard user interaction, it also offered Instagram profile automation. It required pretty sophisticated architecture and the use of multithreading. I tried to keep my codebase transparent, so I've applied patterns such as CQS, or Dependency Injection. For this purpose, I used Autofac and AutoMapper libraries. Also, I've used the exception handling middleware, which made request-level error handling easy and convenient. For authentication and authorization, I used JSON Web Tokens, which also involved refreshing them. In addition to that, as we were using Instagram's internal API, I've had an opportunity to patiently observe the application's network traffic and draw conclusions, with the help of tools such as Postman and mitmproxy. Fighting with Instagram's anti-spam security took too much time, which has forbidden the on-time project delivery. Nonetheless, it hasn't been closed - just postponed to the after-hours."
       }
     },
     "frontend": {
       "followup-dashboard": {
-        "title": "FollowUP - management dashboard"
+        "title": "FollowUP - management dashboard",
+        "description": "Management dashboard of FollowUP agency's services, dedicated to our WebAPI. What's interesting, when I started creating it, I've had no experience with the Vue.js framework. I figured that the project would be perfect for learning it, as it required a few different views and also an API integration. The whole project, including UI/UX, is made entirely by myself. Because of the problems on the backend side of the project, today's dashboard doesn't implement all the planned functionality (it lacks promotion scheduling, running options, etc.). However, managing them, the addition of Instagram account, and changing its settings is available. The biggest priority of the project was the UI clarity and general convenience. I've also paid lots of attention to UI animations, which made the application even more pleasant to use. This project has taught me how to work with SPA applications based on components, centralized application state, and Axios library. All of this was supervised by ESLint, with Airbnb's configuration. Moreover, I've had an opportunity to develop my fast self-learning skills in foreign technology."
+      },
+      "followup-landing": {
+        "title": "FollowUP - landing page",
+        "description": "Every internet business needs a landing page - FollowUP wasn't an exception. I opted for a simple, clear layout divided into sections, consisting of a header, simple isometric illustration, and a brief description. For better code organization, I've used a simple framework called DnaWeb, which has let me chunk the HTML code of the website. Moreover, it made the process of adding reveal animations on scrolling a lot easier. Animations bound to the illustrations are also pretty interesting. In the 'likes and follows' view, I've pushed SVG's capabilities to its limits and introduced an animation related to clipPath, which allowed me not only to draw a chart on the board but also to make the buttons beneath them interactive. What's more, I've put a contact form on the page, bound to the Netlify Forms technology."
+      },
+      "mkowalski-dev": {
+        "title": "This page",
+        "description": "Yeah, I know... Including the portfolio page on the portfolio page is a bit cringy, nevertheless, my decision was guided by the technologies I've used. Namely, it's my first project where I've used React.js and TypeScript. In retrospect, React might have not been the best choice for the page that simple, however, that mistake has let me understand deeply its inner workings, and, in combination with TypeScript, it gave me a solid foundation for creating real applications based on this framework. The biggest problem for me was the dynamically rendered DOM, which has disallowed me to properly reveal (animate) DOM elements on scrolling, as the querySelector was unavailable for me. What's more, I couldn't find a proper animation library, which would solve my problems - every one of them created more trouble than profit. This has led me to create my own, universal reveal component, which additionally doesn't create any unnecessary wrapper elements, allowing the DOM to save its original layout i.e. with the use of the CSS grid. Likewise, react-router turned out to not be the best solution for the required navigation. If I were to choose the technology today, I would probably decide on something like Gatsby.js or Next.js - about which I had no knowledge whatsoever back then."
       }
     },
     "design": {
       "followup-design": {
-        "title": "FollowUP - visual identification"
+        "title": "FollowUP - visual identification",
+        "description": "FollowUP's visual identification included its logo, logotype, and business cards associated with the company. The main theme of the design was dark graphite background, giving the recipient a sense of professionalism, and some blue accents giving the solution a bit of freshness. What's more, the arrow in the mark is strictly bound to the use of automation, whose main objective was to promote social media profiles, while the heart symbol, being a part of the letter \"P\" relates to Instagram's like icon (as it was the target platform of the application). The introduction of the wavy theme was supposed to make the whole lighter in reception, recalling familiar, mild shapes, which additionally smoothens everything. Both the logo, and the logotype were created in two color versions, and also in monochromatic, which in the combination with the project's simplicity allows the marks to be printed. I've skipped the brand book this time, as the work was supposed to be used only by me for the company's internal purposes."
       }
     }
   },
