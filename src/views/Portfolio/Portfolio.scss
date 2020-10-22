@@ -4,7 +4,7 @@
   &.narrow {
     @media (min-width: 768px) {
       grid-template-areas: initial;
-      grid-template-columns: 1fr 8fr;
+      grid-template-columns: minmax(150px, 1fr) 8fr;
     }
   }
 
@@ -36,7 +36,13 @@
 .portfolio-items-view-grid {
   display: grid;
   grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
-  justify-items: center;
+  grid-gap: 20px;
+  justify-items: stretch;
+  padding: 10px;
+
+  @media (max-width: 767px) {
+    padding-bottom: 150px;
+  }
 }
 
 .portfolio-project-card {
@@ -46,9 +52,6 @@
   height: 250px;
   display: grid;
   grid-template-rows: 8fr 1fr;
-  width: 100%;
-  margin: 20px;
-  max-width: 80vw;
   transition: transform 0.25s;
   overflow: hidden;
 
