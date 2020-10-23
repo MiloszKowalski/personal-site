@@ -49,7 +49,7 @@
       },
       "frontend": {
         "JavaScript": "ECMAScript 6+, basics of TypeScript, basic knowledge of JS ecosystem;",
-        "Reactjs": "create-react-app, JSX, Context, Hooks;",
+        "Reactjs": "JSX, Context, Hooks, HOCs, render-props;",
         "Vuejs": "Vue CLI, transitions, filters, async components, Vuex store;",
         "axios": "basic REST API requests; request middleware;",
         "Jest": "basic unit testing."
@@ -79,7 +79,7 @@
       },
       "backend": {
         "CSharp": "solid understanding of the language - delegates (with lambdas, Action and Func), generics, reflection, advanced async etc.; SOLID principles; design patterns - Factory, Template Method, Repository, Singleton, Observer etc.",
-        "ASPNET Core": "creating WebAPI using MVC pattern, authentication and authorization using  JSON Web Tokens; background services; EntityFramework Core + MSSQL",
+        "ASPNET Core": "creating WebAPI using MVC pattern, authentication and authorization using  JSON Web Tokens; background services; EntityFramework Core + MSSQL; mapping using AutoMapper library",
         "NET": "familarity with the runtime environment, especially .NET Core, knowledge of its frameworks and platforms",
         "autofac": "basics of Dependency Injection; registering and resolving services; lifetime scopes",
         "xUnitnet": "basic unit testing"
