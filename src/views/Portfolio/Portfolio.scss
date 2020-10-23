@@ -1,14 +1,16 @@
+@import '~styles/breakpoints';
+
 .portfolio-view-wrapper {
   display: grid;
 
   &.narrow {
-    @media (min-width: 768px) {
+    @media (min-width: $bp-from-tablet) {
       grid-template-areas: initial;
       grid-template-columns: minmax(150px, 1fr) 8fr;
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-from-tablet) {
     overflow: hidden;
   }
 }
@@ -18,7 +20,7 @@
   height: 100vh;
   max-width: 100%;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-from-tablet) {
     padding-left: 50px;
     overflow: auto;
   }
@@ -35,12 +37,12 @@
 
 .portfolio-items-view-grid {
   display: grid;
-  grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr) );
   grid-gap: 20px;
   justify-items: stretch;
   padding: 10px;
 
-  @media (max-width: 767px) {
+  @media (max-width: $bp-to-tablet) {
     padding-bottom: 150px;
   }
 }
@@ -48,7 +50,7 @@
 .portfolio-project-card {
   border-radius: 15px;
   background: linear-gradient(235deg, var(--gradient-start), var(--gradient-end));
-  color: #fff;
+  color: var(--main-light);
   height: 250px;
   display: grid;
   grid-template-rows: 8fr 1fr;

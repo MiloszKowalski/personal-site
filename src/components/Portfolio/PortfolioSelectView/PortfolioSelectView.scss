@@ -1,3 +1,5 @@
+@import '~styles/breakpoints';
+
 .portfolio-select-wrapper {
   height: 100vh;
   overflow: auto;
@@ -10,7 +12,7 @@
     text-align: center;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-from-tablet) {
     grid-template-columns: repeat(3, 1fr);
     margin-top: 0;
     margin-bottom: 0;
@@ -18,7 +20,7 @@
 }
 
 .portfolio-menu-card {
-  box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.3);
+  box-shadow: 5px 5px 10px 0 var(--faded-dark);
   margin: 25px auto;
   width: 80%;
   display: grid;

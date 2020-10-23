@@ -16,7 +16,6 @@ import Portfolio from 'views/Portfolio';
 import Resume from 'views/Resume';
 
 import ScrollToTop from 'components/ScrollToTop/ScrollToTop';
-import 'styles/animate-svg.scss';
 
 function App() {
   return (

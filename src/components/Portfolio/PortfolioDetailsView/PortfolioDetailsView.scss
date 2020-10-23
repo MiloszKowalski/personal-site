@@ -1,3 +1,5 @@
+@import '~styles/breakpoints';
+
 .portfolio-details-wrapper {
   height: 100vh;
   width: 100vw;
@@ -6,7 +8,7 @@
   position: relative;
   padding-top: 100px;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     padding-top: 50px;
     display: grid;
     grid-template-areas: "projectdescription projectpreview";
@@ -37,8 +39,8 @@
     stroke: var(--gradient-end);
     transition: stroke 0.25s;
 
-    @media (min-width: 1024px) {
-      stroke: rgba(255, 255, 255, 0.5);
+    @media (min-width: $bp-from-desktop) {
+      stroke: var(--half-transparent-light);
     }
   }
 
@@ -48,14 +50,14 @@
     & svg {
       stroke: var(--gradient-start);
 
-      @media (min-width: 1024px) {
-        stroke: rgba(255, 255, 255, 1);
+      @media (min-width: $bp-from-desktop) {
+        stroke: var(--main-light);
       }
     }
   }
 
-  @media (min-width: 1024px) {
-    background: linear-gradient(45deg, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0.2));
+  @media (min-width: $bp-from-desktop) {
+    background: linear-gradient(45deg, var(--main-light) 30%, var(--faded-light));
     padding: 15px;
     -webkit-background-clip: text;
     background-clip: text;
@@ -84,7 +86,7 @@
     width: 25px;
 
     path {
-      fill: #000;
+      fill: var(--main-dark);
     }
   }
 
@@ -96,7 +98,7 @@
     right: 60px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     top: 50px;
     margin: 18px;
 
@@ -113,7 +115,7 @@
       width: 30px;
 
       path {
-        fill: #fff;
+        fill: var(--main-light);
       }
     }
   }
@@ -138,11 +140,11 @@
       height: 1px;
       position: relative;
       top: 5px;
-      background: #ccc;
+      background: var(--secondary-light);
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     grid-area: projectpreview;
     padding: 20px;
 
@@ -173,7 +175,7 @@
     left: 10px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     width: 100%;
     padding: 5px;
     flex-wrap: wrap;
@@ -185,7 +187,7 @@
   background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
   background-attachment: fixed;
   min-width: max-content;
-  color: #fff;
+  color: var(--main-light);
   padding: 10px 15px;
   border-radius: 1000px;
   cursor: default;
@@ -196,7 +198,7 @@
 }
 
 .portfolio-project-description {
-  color: #fff;
+  color: var(--main-light);
   position: relative;
   min-height: calc(70vh - 215px);
   width: 100%;
@@ -211,7 +213,7 @@
     overflow: auto;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     grid-area: projectdescription;
     display: flex;
     flex-direction: row-reverse;
@@ -225,7 +227,7 @@
       direction: rtl;
       overflow-y: auto;
       p {
-        text-align: justify;
+        text-align: left;
         direction: ltr;
       }
     }
@@ -233,7 +235,7 @@
 }
 
 #portfolio-details-wave {
-  background: white;
+  background: var(--main-light);
   transform: scaleY(-1) translateY(20px);
   height: 50px;
   width: 100%;
@@ -245,7 +247,7 @@
     width: 50%;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     transform: initial;
     flex-basis: 30px;
     height: 100%;
@@ -258,7 +260,7 @@
       width: 100%;
 
       path {
-        fill: #fff;
+        fill: var(--main-light);
       }
     }
   }

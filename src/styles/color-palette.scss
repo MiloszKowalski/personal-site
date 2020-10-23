@@ -1,6 +1,22 @@
 :root {
+  --main-light: #FFF;
+  --secondary-light: #CCC;
+
+  --main-dark: #000;
+  --secondary-dark: #333;
+
   --gradient-start: #B93EF1;
   --gradient-end: #6523B8;
   --standard-gradient: linear-gradient(var(--gradient-start), var(--gradient-end));
-  --main-light: #fff;
+
+  --modal-header-icon-color: #6F26BF;
+
+  --half-transparent-light: rgba(255, 255, 255, 0.5);
+  --half-transparent-dark: rgba(0, 0, 0, 0.5);
+
+  --faded-light: rgba(255, 255, 255, 0.2);
+  --faded-dark: rgba(0, 0, 0, 0.3);
+
+  --standard-shadow: rgba(0, 0, 0, 0.1);
+  --color-shadow: rgba(185, 62, 241, 0.9);
 }
