@@ -1,5 +1,7 @@
+@import '~styles/breakpoints';
+
 a {
-  color: #fff;
+  color: var(--main-light);
 }
 
 .view-wrapper.resume {
@@ -11,7 +13,7 @@ a {
 }
 
 header#name {
-  color: #fff;
+  color: var(--main-light);
   text-align: center;
   padding-top: 20px;
   position: absolute;
@@ -29,7 +31,7 @@ header#name {
     font-weight: 600;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     width: 50%;
     left: 0;
     right: 0;
@@ -50,7 +52,7 @@ header#name {
   padding: 15px;
   padding-top: 185px;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     display: flex;
     justify-content: space-between;
     padding-top: 120px;
@@ -60,7 +62,7 @@ header#name {
 .resume-top {
   background: linear-gradient(220deg, var(--gradient-start), var(--gradient-end));
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     display: grid;
   }
 }
@@ -72,16 +74,16 @@ ul {
 }
 
 .resume-top ul {
-  color: #fff;
+  color: var(--main-light);
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     margin: 0 5vw;
   }
 }
 
 .resume-photo-wrapper {
   border-radius: 1000px;
-  background-color: #fff;
+  background-color: var(--main-light);
   width: 50vw;
   height: 50vw;
   position: relative;
@@ -91,7 +93,7 @@ ul {
   justify-content: center;
   align-items: center;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     width: 200px;
     height: 200px;
     position: relative;
@@ -122,7 +124,7 @@ svg#resume-top {
   border-radius: 50%;
 
   background: linear-gradient(225deg, var(--gradient-start), var(--gradient-end));
-  box-shadow: 0 0 5px 1px rgba(185, 62, 241, 0.9);
+  box-shadow: 0 0 5px 1px var(--color-shadow);
 }
 
 section.resume-section {
@@ -135,7 +137,7 @@ section.resume-section {
     align-items: center;
     grid-template-columns: 15vw 1fr;
 
-    @media (min-width: 768px) {
+    @media (min-width: $bp-from-tablet) {
       grid-template-columns: 80px 1fr;
     }
   }
@@ -205,11 +207,11 @@ section.resume-section {
       font-size: 1.5em;
     }
 
-    @media (min-width: 480px) {
+    @media (min-width: $bp-from-mobile) {
       font-size: 2em;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $bp-from-tablet) {
       font-size: 2.5em;
     }
 
@@ -231,7 +233,7 @@ section.resume-section {
   .resume-section-content {
     margin: 15px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $bp-from-tablet) {
       margin: 50px;
     }
 
@@ -247,11 +249,11 @@ section.resume-section {
         justify-content: center;
         grid-template-columns: 1fr 3fr 1fr;
 
-        @media (min-width: 768px) {
+        @media (min-width: $bp-from-tablet) {
           grid-template-columns: 120px 6fr 1fr;
         }
 
-        @media (min-width: 1024px) {
+        @media (min-width: $bp-from-desktop) {
           margin: 0 2%;
           width: 40%;
         }
@@ -261,7 +263,7 @@ section.resume-section {
         transition: background-color 0.25s;
 
         &:hover {
-          background-color: #ccc;
+          background-color: var(--secondary-light);
           cursor: pointer;
 
           & > svg {
@@ -274,7 +276,7 @@ section.resume-section {
 
   h4, h5 {
     margin: 0;
-    color: #333;
+    color: var(--secondary-dark);
   }
 
   h4 {
@@ -303,11 +305,11 @@ section.resume-section {
 
     &:hover {
       cursor: pointer;
-      background-color: #ccc;
+      background-color: var(--secondary-light);
 
       &:last-of-type {
         cursor: default;
-        background-color: #fff;
+        background-color: var(--main-light);
       }
     }
 
@@ -317,7 +319,7 @@ section.resume-section {
       height: 40vw;
       position: relative;
 
-      @media(max-width: 768px) {
+      @media(max-width: $bp-from-tablet) {
         &::after {
           content: url('../../components/svg/icons/ZoomInIcon.svg');
           display: block;
@@ -332,7 +334,7 @@ section.resume-section {
           bottom: -30%;
           animation: blink 1s infinite;
           right: -5%;
-          border: 2px solid #fff;
+          border: 2px solid var(--main-light);
           background: linear-gradient(225deg, var(--gradient-start), var(--gradient-end));
         }
 
@@ -357,7 +359,7 @@ section.resume-section {
       }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $bp-from-tablet) {
       grid-template-columns: 140px 1fr;
     }
 
@@ -367,7 +369,7 @@ section.resume-section {
     }
 
     li {
-      color: #333;
+      color: var(--secondary-dark);
       font-size: 0.9rem;
       margin: 10px 0;
 
@@ -378,14 +380,14 @@ section.resume-section {
 
     &#tools-stack {
       grid-template-columns: 1fr;
-      @media (min-width: 768px){
+      @media (min-width: $bp-from-tablet){
         padding-left: 160px;
       }
 
       & #tools-span {
         display: block;
         font-weight: 600;
-        color: #333;
+        color: var(--secondary-dark);
         font-size: 0.9rem;
       }
     }
@@ -394,11 +396,11 @@ section.resume-section {
   ul#skills-list {
     margin: 20px 30px;
 
-    @media(min-width: 768px) {
+    @media(min-width: $bp-from-tablet) {
       margin: 20px 50px;
     }
     li {
-      color: #333;
+      color: var(--secondary-dark);
       margin: 10px 0;
       font-size: 0.9rem;
 

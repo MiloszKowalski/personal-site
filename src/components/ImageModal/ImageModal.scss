@@ -1,9 +1,11 @@
+@import '~styles/breakpoints';
+
 .image-modal-background {
   width: 100vw;
   height: 100vh;
   background: var(--standard-gradient);
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     width: 90vw;
     height: 90vh;
     border-radius: 15px;
@@ -27,7 +29,7 @@
 }
 
 .modal-close-icon {
-  @media(min-width: 1024px) {
+  @media(min-width: $bp-from-desktop) {
     position: relative;
     height: 50px;
     margin: -50px;
@@ -42,7 +44,7 @@
     right: 20px;
     cursor: pointer;
     .close-a {
-      fill: #fff;
+      fill: var(--main-light);
     }
 
     .close-b {
@@ -50,7 +52,7 @@
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     #close-icon {
       width: 40px;
       position: absolute;

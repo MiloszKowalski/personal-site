@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+@import '~styles/breakpoints';
 
 .hero {
   background: var(--standard-gradient);
@@ -9,20 +7,20 @@
   padding: 30px;
   overflow: hidden;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     padding: 50px;
   }
 
   .socialmedia-container {
     display: flex;
     justify-content: center;
-    @media (min-width: 768px) {
+    @media (min-width: $bp-from-tablet) {
       justify-content: start;
       position: absolute;
       bottom: 50px;
     }
     svg {
-      fill: #fff;
+      fill: var(--main-light);
       width: 36px;
       height: 36px;
       margin: 12px;
@@ -50,7 +48,7 @@
     height: 45vh;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-from-tablet) {
     height: 65vh;
     left: 50%;
   }
@@ -68,7 +66,7 @@
   width: 100%;
   pointer-events: none;
 
-  @media (min-width: 480px) {
+  @media (min-width: $bp-from-mobile) {
     height: 100%;
   }
 }
@@ -80,7 +78,7 @@
   width: 100%;
   pointer-events: none;
 
-  @media (min-width: 480px) {
+  @media (min-width: $bp-from-mobile) {
     height: 100%;
   }
 }
@@ -92,7 +90,7 @@
   height: 10%;
   pointer-events: none;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-from-tablet) {
     height: 30%;
   }
 }
@@ -101,19 +99,19 @@
   margin-top: 10vh;
   text-align: center;
 
-  @media (min-width: 1024px), (orientation: landscape) {
+  @media (min-width: $bp-from-desktop), (orientation: landscape) {
     text-align: left;
   }
 }
 
 .hero h1, h2 {
-  color: #fff;
+  color: var(--main-light);
   margin: 0;
 }
 
 .hero h1 {
   font-size: 2.4rem;
-  @media (min-width: 480px) {
+  @media (min-width: $bp-from-mobile) {
     font-size: 3rem;
   }
 }
@@ -121,11 +119,11 @@
 .hero h2 {
   margin: 0 auto;
   font-size: 1.2rem;
-  @media (min-width: 1024px), (orientation: landscape) {
+  @media (min-width: $bp-from-desktop), (orientation: landscape) {
     height: auto;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     font-size: 1.6rem;
   }
   font-weight: normal;
@@ -144,14 +142,14 @@ a {
   cursor: pointer;
   font-weight: bold;
   color: var(--gradient-end);
-  background-color: #fff;
+  background-color: var(--main-light);
   border: 1px solid transparent;
   transition: transform 0.25s;
   padding: 10px 25px;
   margin: 10px 5px;
   font-size: 0.8em;
 
-  @media (min-width: 1024px), (orientation: landscape) {
+  @media (min-width: $bp-from-desktop), (orientation: landscape) {
     padding: 10px 30px;
     margin: 20px 0;
     margin-right: 15px;
@@ -160,16 +158,16 @@ a {
 
   &.alt {
     background-color: transparent;
-    color: #fff;
-    border: 1px solid #fff;
+    color: var(--main-light);
+    border: 1px solid var(--main-light);
   }
 
   &.purple {
     background: linear-gradient(-45deg, var(--gradient-start), var(--gradient-end));
     background-size: 200%;
     transition: background-position-x 0.25s, transform 0.25s;
-    color: #fff;
-    border: 1px solid #fff;
+    color: var(--main-light);
+    border: 1px solid var(--main-light);
 
     &:hover {
       background-position-x: right;
@@ -195,7 +193,7 @@ section.coding-with-passion {
     font-size: 1.4em;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     flex-direction: row-reverse;
     padding: 0;
     margin: 0 auto;
@@ -205,7 +203,7 @@ section.coding-with-passion {
   .coding-text-wrapper {
     margin-bottom: 20px;
     min-width: 30%;
-    @media (min-width: 1024px) {
+    @media (min-width: $bp-from-desktop) {
       margin-right: 50px;
     }
   }
@@ -219,21 +217,21 @@ section.coding-with-passion {
     padding: 3px;
     background: var(--standard-gradient);
     margin-top: 20px;
-    color: #fff;
+    color: var(--main-light);
     text-align: center;
 
-    @media (min-width: 480px) {
+    @media (min-width: $bp-from-mobile) {
       min-height: 40vh;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: $bp-from-desktop) {
       min-height: 60vh;
       margin: 40px;
       width: 45vw;
     }
 
     .coding-img {
-      border: 10px solid #fff;
+      border: 10px solid var(--main-light);
       width: 100%;
       background: url('./img/passion-large.jpg');
       background: -webkit-image-set( url('./img/passion-small.jpg') 1x, url('./img/passion-large.jpg') 2x );
@@ -251,21 +249,21 @@ h3 {
   -webkit-text-fill-color: transparent;
   font-size: 1.4em;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     font-size: 1.5em;
   }
 
   &.alt {
     background: none;
-    color: #fff;
-    -webkit-text-fill-color: #fff;
+    color: var(--main-light);
+    -webkit-text-fill-color: var(--main-light);
   }
 }
 
 p {
   text-align: justify;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     text-align: left;
   }
 }
@@ -277,7 +275,7 @@ section.design-experience {
   background-attachment: fixed;
   position: relative;
   text-align: center;
-  color: #fff;
+  color: var(--main-light);
   display: grid;
   grid-template-areas:
   "picture"
@@ -286,7 +284,7 @@ section.design-experience {
   "footer";
   grid-template-rows: 1fr 5fr 8fr 1fr;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     flex-direction: row-reverse;
     text-align: left;
     padding: 0;
@@ -305,7 +303,7 @@ section.design-experience {
     align-self: center;
     position: relative;
     top: -55px;
-    @media (min-width: 1024px) {
+    @media (min-width: $bp-from-desktop) {
       margin: 0 60px;
     }
   }
@@ -313,9 +311,9 @@ section.design-experience {
   .design-img-wrapper {
     grid-area: image;
     max-width: 100%;
-    color: black;
+    color: var(--main-dark);
     margin: 8vw;
-    @media (min-width: 1024px) {
+    @media (min-width: $bp-from-desktop) {
       margin: 0 60px;
       margin-bottom: 50px;
     }
@@ -326,7 +324,7 @@ section.design-experience {
       padding: 10px;
       background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
       background-attachment: fixed;
-      border: 3px solid #fff;
+      border: 3px solid var(--main-light);
     }
 
     .design-img {
@@ -344,7 +342,7 @@ section.design-experience {
 
   #design-one-svg img {
     justify-self: start;
-    @media (max-width: 1024px){
+    @media (max-width: $bp-from-desktop){
       transform-origin: top;
       transform: scaleY(0.7) translateY(-5px);
     }
@@ -368,7 +366,7 @@ section#contact {
     width: 80%;
 
     label {
-      color: #fff;
+      color: var(--main-light);
       margin: 20px auto 10px 5px;
     }
 
@@ -389,7 +387,7 @@ section#contact {
 
     button {
       margin: 20px auto;
-      background: #fff;
+      background: var(--main-light);
       color: var(--gradient-end);
       font-family: 'Montserrat', sans-serif;
       font-weight: bold;
@@ -413,7 +411,7 @@ section#contact {
     left: 0;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     padding-bottom: 10%;
     form {
       width: 30%;
@@ -434,7 +432,7 @@ section#contact {
 }
 
 .copyright p {
-  color: #999;
+  color: var(--half-transparent-dark);
   font-size: 0.8rem;
   text-align: center;
 }
