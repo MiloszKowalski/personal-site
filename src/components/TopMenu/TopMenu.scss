@@ -1,3 +1,5 @@
+@import '~styles/breakpoints';
+
 nav.TopMenu {
   width: 100%;
   position: fixed;
@@ -17,7 +19,7 @@ nav.TopMenu {
     position: absolute;
     width: 100%;
     height: 100%;
-    box-shadow: 0 3px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 5px 0px var(--standard-shadow);
     z-index: -1;
     background-color: var(--main-light);
   }
@@ -48,7 +50,7 @@ nav.TopMenu {
     flex-direction: row;
     transition: transform 0.5s ease-in-out;
 
-    @media (max-width: 1024px) {
+    @media (max-width: $bp-from-desktop) {
       position: fixed;
       margin: 0;
       margin-top: 50px;
@@ -117,7 +119,7 @@ nav.TopMenu {
       display: none;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: $bp-from-desktop) {
       background: var(--main-light);
       -webkit-background-clip: text;
       background-clip: text;
@@ -165,7 +167,7 @@ nav.TopMenu {
       }
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: $bp-from-desktop) {
       display: block;
     }
   }
@@ -185,7 +187,7 @@ nav.TopMenu {
     }
 
     li a {
-      @media (max-width: 1024px) {
+      @media (max-width: $bp-from-desktop) {
         color: var(--main-light);
         -webkit-text-fill-color: var(--main-light);
       }
@@ -195,7 +197,7 @@ nav.TopMenu {
       background-size: 300% 300%;
       background-position: top;
 
-      @media (max-width: 1024px) {
+      @media (max-width: $bp-from-desktop) {
         color: var(--main-light);
         -webkit-text-fill-color: var(--main-light);
       }
@@ -203,8 +205,8 @@ nav.TopMenu {
       a::after, a.active::after {
         background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
         background-size: 300% 300%;
-        @media (max-width: 1024px) {
-          background: #fff;
+        @media (max-width: $bp-from-desktop) {
+          background: var(--main-light);
         }
       }
 
@@ -242,7 +244,7 @@ nav.TopMenu {
       background-color: var(--main-light);
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: $bp-from-desktop) {
       li {
         font-size: 1.1em;
         color: transparent;
@@ -256,7 +258,7 @@ nav.TopMenu {
   }
 
   &.expanded, &.expanded.normal {
-    @media (max-width: 1024px) {
+    @media (max-width: $bp-from-desktop) {
       ul {
         transform: translateX(-100%);
       }
@@ -272,7 +274,7 @@ nav.TopMenu {
       }
 
       a::after, a.active::after {
-        background: #fff;
+        background: var(--main-light);
       }
     }
   }
@@ -282,10 +284,10 @@ nav.TopMenu {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.25s, visibility 0.25s;
-  @media (max-width: 1024px) {
+  @media (max-width: $bp-from-desktop) {
     width:100%;
     height: 100vh;
-    background-color: rgba(0,0,0,0.7);
+    background-color: var(--half-transparent-dark);
     position: absolute;
     top: 0;
     left: 0;
@@ -303,7 +305,7 @@ nav.TopMenu {
 
     transition: transform 0.25s;
 
-    @media (max-width: 1024px) {
+    @media (max-width: $bp-from-desktop) {
       width: 60px;
     }
   }

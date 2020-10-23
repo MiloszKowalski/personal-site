@@ -1,3 +1,5 @@
+@import '~styles/breakpoints';
+
 .slider-wrapper {
   background: var(--standard-gradient);
   height: 30vh;
@@ -9,7 +11,7 @@
     opacity: 0.5;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     margin-bottom: 20px;
     border-radius: 15px;
     width: 100%;
@@ -38,7 +40,7 @@
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     background-size: 60%;
     background-position: left;
   }
@@ -54,7 +56,7 @@
 .slider-dot {
   width: 10px;
   height: 10px;
-  border: 1.5px solid #eee;
+  border: 1.5px solid var(--secondary-light);
   display: inline-block;
   margin: 5px;
   border-radius: 1000px;
@@ -62,7 +64,7 @@
   box-shadow: 0 0 1px 1px rgba(0,0,0,0.2);
 
   &.active {
-    background: #eee;
+    background: var(--secondary-light);
   }
 }
 
@@ -80,7 +82,7 @@
 
   & svg {
     .z {
-      stroke: #eee;
+      stroke: var(--secondary-light);
     }
 
     cursor: pointer;

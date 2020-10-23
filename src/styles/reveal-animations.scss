@@ -1,3 +1,5 @@
+@import '~styles/breakpoints';
+
 .faded {
   opacity: 0;
 }
@@ -55,7 +57,7 @@
 }
 
 .slide-in-bottom-mobile-only {
-  @media (max-width: 1023px) {
+  @media (max-width: $bp-to-desktop) {
     animation: slide-in-bottom 0.85s both;
   }
 }

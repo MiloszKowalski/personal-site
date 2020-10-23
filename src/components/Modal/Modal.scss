@@ -1,3 +1,5 @@
+@import '~styles/breakpoints';
+
 .modal-wrapper {
   display: flex;
   justify-content: center;
@@ -5,7 +7,7 @@
   position: fixed;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0,0,0,0.5);
+  background-color: var(--half-transparent-dark);
   z-index: 10000;
   visibility: hidden;
   opacity: 0;
@@ -20,10 +22,10 @@
 .modal {
   width: 100%;
   height: 100vh;
-  background-color: #fff;
+  background-color: var(--main-light);
   position: relative;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     width: 60vw;
     height: 80vh;
     border-radius: 15px;
@@ -37,7 +39,7 @@
   grid-template-columns: 140px 6fr 80px;
   background: linear-gradient(270deg, var(--gradient-start), var(--gradient-end));
   height: 20vh;
-  color: #fff;
+  color: var(--main-light);
 
   & h1 {
     text-transform: uppercase;
@@ -61,7 +63,7 @@
   width: 90px;
   height: 90px;
   padding: 10px;
-  background-color: #fff;
+  background-color: var(--main-light);
   margin: 20px auto;
 
   & svg {
@@ -70,16 +72,16 @@
 
     margin: 0 auto;
     .a {
-      fill: #6f26bf;
+      fill: var(--modal-header-icon-color);
     }
 
     .b {
-      fill: #fff;
+      fill: var(--main-light);
       stroke: none;
     }
 
     .e {
-      stroke: #6f26bf;
+      stroke: var(--modal-header-icon-color);
       stroke-miterlimit: 10;
       stroke-width: 1.85px;
     }
@@ -99,14 +101,14 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $bp-from-desktop) {
   #close-icon {
     position: absolute;
     right: 100px;
     top: -10px;
 
     .close-a {
-      fill: #fff;
+      fill: var(--main-light);
     }
 
     .close-b {
@@ -123,7 +125,7 @@
   line-height: 1.5;
   white-space: pre-wrap;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-from-desktop) {
     height: 60vh;
     padding-bottom: 0;
     padding-top: 25px;
@@ -137,7 +139,7 @@
   align-items: center;
   margin: 30px 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-from-tablet) {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 6fr;
   }
@@ -161,7 +163,7 @@
   max-height: 100px;
   margin: 0 auto;
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-from-tablet) {
     width: 15vw;
     height: 15vw;
     min-width: 60px;
@@ -176,7 +178,7 @@
 }
 
 .modal-item-description {
-  @media (min-width: 768px) {
+  @media (min-width: $bp-from-tablet) {
     margin-left: 15px;
   }
 }

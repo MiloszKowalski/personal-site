@@ -98,10 +98,10 @@ const Home: React.FC = () => {
         </section>
         <section className="design-experience">
           <picture id="design-one-svg">
-            <source srcSet={`${designOneMobile} 1x`} media="(max-width: 768px)" />
+            <source srcSet={`${designOneMobile} 1x`} media={breakpoints.phone} />
             <img srcSet={`${designOneDesktop} 2x`} alt="background" />
           </picture>
-          <Reveal direction="bottom" offset={30} cascade>
+          <Reveal direction="bottom" offset={50} cascade>
           <div className="design-text-wrapper">
             <h3 className="alt">{ t('homepage.experience with design.heading') }</h3>
             <p>{ t('homepage.experience with design.p1') }</p>
@@ -111,7 +111,7 @@ const Home: React.FC = () => {
             </div></Link>
           </div>
           </Reveal>
-          <Reveal offset={30} direction="right">
+          <Reveal offset={50} direction="right">
             <div className="design-img-wrapper">
               <div className="design-img-background">
                 <div className="design-img"></div>
@@ -136,14 +136,14 @@ const Home: React.FC = () => {
           </form>
           </Reveal>
         <picture id="contact-photo">
-          <source srcSet={`${contactPhotoMobile} 1x`} media="(max-width: 768px)" />
+          <source srcSet={`${contactPhotoMobile} 1x`} media={breakpoints.phone} />
           <Reveal offset={50} direction="left">
           <img srcSet={`${contactPhotoDesktop} 2x`} alt="" />
           </Reveal>
         </picture>
         <img id="footer-img" src={ designTwo } alt="background" />
       </section>
-      <Reveal offset={-10} direction="bottom">
+      <Reveal offset={-10} direction="top">
       <footer>
         <div className="copyright">
           <p>{ t('homepage.footer.p1') }</p>
