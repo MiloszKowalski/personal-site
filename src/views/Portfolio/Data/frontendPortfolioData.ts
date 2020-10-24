@@ -39,7 +39,7 @@ const frontendProjects: Project[] = [
       'https://i.imgur.com/miKQKXr.png'
     ],
     githubLink: 'https://github.com/MiloszKowalski/followup-dashboard',
-    websiteLink: 'https://followup-dashboard.netlify.app'
+    websiteLink: 'https://dashboard.mkowalski.dev'
   },
   {
     id: 'followup-landing',
