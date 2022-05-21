@@ -75,7 +75,7 @@
     },
     "modal-description": {
       "experience": {
-        "FollowUP": "automatyzacja mediów społecznościowych - tworzenie i utrzymywanie oprogramowania serwerowego obsługującego interakcję użytkowników oraz automatyzację profili Instagram (ASP.Net Core); tworzenie panelu użytkownika do zarządzania usługami (Vue.js); zarządzanie bazą danych MSSQL; identyfikacja wizualna; stworzenie landing page z opisem usług."
+        "FollowUP": "automatyzacja mediów społecznościowych - samodzielne tworzenie i utrzymywanie oprogramowania serwerowego obsługującego interakcję użytkowników oraz automatyzację profili Instagram (ASP.Net Core); tworzenie panelu użytkownika do zarządzania usługami (Vue.js); zarządzanie bazą danych MS SQL; identyfikacja wizualna; stworzenie landing page z opisem usług"
       },
       "backend": {
         "CSharp": "dobra znajomość języka - delegaty (z wyrażeniami lambda, Action oraz Func), typy ogólne (generics), odbicie (reflection), zaawansowana asynchroniczność etc.; praktyki SOLID; wzorce projektowe - Factory, Template Method, Repository, Singleton, Observer etc.",

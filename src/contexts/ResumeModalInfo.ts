@@ -96,9 +96,9 @@ export const techStackInfo: Modal[] = [
         description: "resume.modal-description.backend.NET"
       },
       {
-        title: "autofac",
+        title: "Dependency Injection",
         iconPath: AutofacIcon,
-        description: "resume.modal-description.backend.autofac"
+        description: "resume.modal-description.backend.DependencyInjection"
       },
       {
         title: "xUnit.net",
