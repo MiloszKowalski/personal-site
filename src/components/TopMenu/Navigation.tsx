@@ -45,16 +45,16 @@ const Navigation: React.FC = () => {
       <div className="nav-shadow" onClick={ handleClick }></div>
       <ul>
         <li onClick={ handleClick }>
-          <Link to="/">{ t('navigation.main page') }</Link>
+          <Link to="/"><>{ t('navigation.main page') }</></Link>
         </li>
         <li onClick={ handleClick }>
-          <NavLink to="/resume">{ t('navigation.resume') }</NavLink>
+          <NavLink to="/resume"><>{ t('navigation.resume') }</></NavLink>
         </li>
         <li onClick={ handleClick }>
-          <NavLink to="/portfolio">{ t('navigation.portfolio') }</NavLink>
+          <NavLink to="/portfolio"><>{ t('navigation.portfolio') }</></NavLink>
         </li>
         <li onClick={ handleClick }>
-          <NavLink to="/about">{ t('navigation.about me') }</NavLink>
+          <NavLink to="/about"><>{ t('navigation.about me') }</></NavLink>
         </li>
         <li className="flag" onClick={ changeLanguage }>
           { i18n.language === Language.Polish ?  <GBFlag /> : <PLFlag /> }
